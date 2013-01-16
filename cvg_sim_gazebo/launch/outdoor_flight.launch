@@ -14,12 +14,6 @@
       <arg name="spawncoords" value="-x 1 -y 0 -z 0.5"/>
     </include>
   </group>
-    <include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
-      <arg name="model" value="$(find cvg_sim_gazebo)/urdf/quadrotor_sensors.urdf.xacro"/> 
-      <arg name="modelname" value="drone0"/>
-      <arg name="spawncoords" value="-x 1 -y 0 -z 0.5"/>
-    </include>
-  </group>
 
   <group ns="drone1">
     <param name="tf_prefix" value="drone0"/>
