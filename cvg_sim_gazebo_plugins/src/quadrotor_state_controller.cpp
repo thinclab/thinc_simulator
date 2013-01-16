@@ -60,17 +60,17 @@ void GazeboQuadrotorStateController::Load(physics::ModelPtr _model, sdf::Element
     velocity_topic_ = _sdf->GetElement("topicName")->GetValueString();
 
   if (!_sdf->HasElement("takeoffTopic"))
-    takeoff_topic_ = "/ardrone/takeoff";
+    takeoff_topic_ = "/drone0/ardrone/takeoff";
   else
     takeoff_topic_ = _sdf->GetElement("takeoffTopic")->GetValueString();
 
   if (!_sdf->HasElement("/ardrone/land"))
-    land_topic_ = "/ardrone/land";
+    land_topic_ = "/drone0/ardrone/land";
   else
     land_topic_ = _sdf->GetElement("landTopic")->GetValueString();
 
   if (!_sdf->HasElement("resetTopic"))
-    reset_topic_ = "/ardrone/reset";
+    reset_topic_ = "/drone0/ardrone/reset";
   else
     reset_topic_ = _sdf->GetElement("resetTopic")->GetValueString();
 
