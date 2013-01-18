@@ -82,7 +82,7 @@ void GazeboQuadrotorSimpleController::Load(physics::ModelPtr _model, sdf::Elemen
     velocity_topic_ = _sdf->GetElement("topicName")->GetValueString();
 
   if (!_sdf->HasElement("navdataTopic"))
-    navdata_topic_ = "/ardrone/navdata";
+    navdata_topic_ = "ardrone/navdata";
   else
     navdata_topic_ = _sdf->GetElement("navdataTopic")->GetValueString();
 
@@ -166,7 +166,7 @@ void GazeboQuadrotorSimpleController::Load(physics::ModelPtr _model, sdf::Elemen
       ros::VoidPtr(), &callback_queue_);
     navdata_subscriber_ = node_handle_->subscribe(ops);
   }
-    //m_navdataPub = node_handle_->advertise< ardrone_autonomy::Navdata >( "/ardrone/navdata", 10 );
+    //m_navdataPub = node_handle_->advertise< ardrone_autonomy::Navdata >( "ardrone/navdata", 10 );
 
 
   // subscribe imu
