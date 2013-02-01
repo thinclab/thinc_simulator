@@ -44,16 +44,16 @@ int main(int argc, char* argv[]) {
             //convert position coordinates for grid to strings
             string col_pos, row_pos, count; 
             stringstream s5;
-            s5 << i * columns * cell_width + 0.01;
+            s5 << i * cell_width;
             col_pos = s5.str(); ;
             stringstream s6;
-            s6 << j * rows * cell_height + 0.01;
+            s6 << j * cell_height;
             row_pos = s6.str();
             stringstream s7; 
             s7 << counter; 
             count = s7.str(); 
             
-            if (j == 0)
+            if (i== 0 && j == 0)
                 output += "  <link name=\"base_link\">\n";
             else
                 output += "  <link name=\"link" + count + "\">\n";
@@ -70,9 +70,9 @@ int main(int argc, char* argv[]) {
             output += "      </geometry>\n";
             
             if (i%2 && j%2 || !i%2 && !j%2)
-                output += WHITE; 
-            else
                 output += BLUE; 
+            else
+                output += WHITE; 
 
             output += "    </visual>\n";
             output += "    <collision>\n";
@@ -86,7 +86,7 @@ int main(int argc, char* argv[]) {
             output += "    <static>true</static>\n";
             output += "  </gazebo>\n\n\n";
 
-            if (i != 0 && j != 0) {
+            if (!(i == 0 && j == 0)) {
                 output += "  <joint name=\"base_to_link" + count + "\" type=\"fixed\">\n";
                 output += "    <parent link=\"base_link\"/>\n";
                 output += "    <child link=\"link" + count + "\"/>\n";
