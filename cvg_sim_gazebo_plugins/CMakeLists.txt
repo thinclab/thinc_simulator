@@ -38,6 +38,9 @@ rosbuild_add_library(hector_gazebo_quadrotor_simple_controller src/quadrotor_sim
 
 rosbuild_add_library(hector_gazebo_quadrotor_state_controller src/quadrotor_state_controller.cpp)
 
+#Add the grid_floor file
+rosbuild_add_library(grid_floor src/grid_floor.cpp)
+
 rosbuild_add_executable(test_trajectory src/test_trajectory.cpp)
 
 add_subdirectory(urdf)

@@ -4,6 +4,7 @@
    
   <!-- Start Gazebo with wg world running in (max) realtime -->
   <include file="$(find cvg_sim_gazebo)/launch/rolling_landscape_120m.launch"/>
+<!--  <include file="$(find cvg_sim_gazebo)/launch/grid.launch"/>-->
    
   <!-- Spawn simulated quadrotor uav -->
   <group ns="drone0">
@@ -23,5 +24,5 @@
       <arg name="spawncoords" value="-x -1 -y 0 -z 0.5"/>
     </include>
   </group>
-  
+
 </launch>

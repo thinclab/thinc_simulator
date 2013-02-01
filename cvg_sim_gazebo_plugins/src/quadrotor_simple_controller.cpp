@@ -166,7 +166,7 @@ void GazeboQuadrotorSimpleController::Load(physics::ModelPtr _model, sdf::Elemen
       ros::VoidPtr(), &callback_queue_);
     navdata_subscriber_ = node_handle_->subscribe(ops);
   }
-    //m_navdataPub = node_handle_->advertise< ardrone_autonomy::Navdata >( "ardrone/navdata", 10 );
+//    m_navdataPub = node_handle_->advertise< ardrone_autonomy::Navdata >( "ardrone/navdata", 10 );
 
 
   // subscribe imu

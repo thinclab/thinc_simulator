@@ -132,7 +132,7 @@ void GazeboQuadrotorStateController::Load(physics::ModelPtr _model, sdf::Element
     takeoff_subscriber_ = node_handle_->subscribe(ops);
   }
 
-  // subscribe command: take off command
+  // subscribe command: land command
   if (!land_topic_.empty())
   {
     ros::SubscribeOptions ops = ros::SubscribeOptions::create<std_msgs::Empty>(
@@ -167,7 +167,7 @@ void GazeboQuadrotorStateController::Load(physics::ModelPtr _model, sdf::Element
     ROS_INFO_NAMED("quadrotor_state_controller", "Using imu information on topic %s as source of orientation and angular velocity.", imu_topic_.c_str());
   }
 
-  // subscribe sonar senor info
+  // subscribe sonar sensor info
   if (!sonar_topic_.empty())
   {
     ros::SubscribeOptions ops = ros::SubscribeOptions::create<sensor_msgs::Range>(
