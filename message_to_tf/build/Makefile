@@ -36,10 +36,17 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/message_to_tf
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/message_to_tf/build
+=======
+CMAKE_SOURCE_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/message_to_tf
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/message_to_tf/build
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -66,9 +73,15 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/emily/fuerte_workspace/sandbox/tum_simulator/message_to_tf/build/CMakeFiles /home/emily/fuerte_workspace/sandbox/tum_simulator/message_to_tf/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/emily/fuerte_workspace/sandbox/tum_simulator/message_to_tf/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dmillard/fuerte_workspace/sandbox/tum_simulator/message_to_tf/build/CMakeFiles /home/dmillard/fuerte_workspace/sandbox/tum_simulator/message_to_tf/build/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dmillard/fuerte_workspace/sandbox/tum_simulator/message_to_tf/build/CMakeFiles 0
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : all
 
 # The main clean target

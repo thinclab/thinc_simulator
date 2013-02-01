@@ -32,10 +32,17 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
+=======
+CMAKE_SOURCE_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test_trajectory.dir/depend.make
@@ -82,10 +89,17 @@ CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/sim
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/share/nav_msgs/manifest.xml
+<<<<<<< HEAD
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/manifest.xml
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/image_common/camera_calibration_parsers/manifest.xml
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/image_common/camera_info_manager/manifest.xml
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /home/emily/fuerte_workspace/sandbox/ardrone_autonomy/manifest.xml
+=======
+CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/manifest.xml
+CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/image_common/camera_calibration_parsers/manifest.xml
+CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/image_common/camera_info_manager/manifest.xml
+CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /home/dmillard/fuerte_workspace/sandbox/ardrone_autonomy/manifest.xml
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo_msgs/msg_gen/generated
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo_msgs/srv_gen/generated
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
@@ -94,6 +108,7 @@ CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/dyn
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/dynamic_reconfigure/srv_gen/generated
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo/msg_gen/generated
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo/srv_gen/generated
+<<<<<<< HEAD
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg_gen/generated
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /home/emily/fuerte_workspace/sandbox/ardrone_autonomy/msg_gen/generated
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /home/emily/fuerte_workspace/sandbox/ardrone_autonomy/srv_gen/generated
@@ -108,6 +123,22 @@ CMakeFiles/test_trajectory.dir/src/test_trajectory.i: cmake_force
 CMakeFiles/test_trajectory.dir/src/test_trajectory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_trajectory.dir/src/test_trajectory.s"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -pthread -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/test_trajectory.cpp -o CMakeFiles/test_trajectory.dir/src/test_trajectory.s
+=======
+CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg_gen/generated
+CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /home/dmillard/fuerte_workspace/sandbox/ardrone_autonomy/msg_gen/generated
+CMakeFiles/test_trajectory.dir/src/test_trajectory.o: /home/dmillard/fuerte_workspace/sandbox/ardrone_autonomy/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/test_trajectory.dir/src/test_trajectory.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -pthread -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/test_trajectory.dir/src/test_trajectory.o -c /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/test_trajectory.cpp
+
+CMakeFiles/test_trajectory.dir/src/test_trajectory.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_trajectory.dir/src/test_trajectory.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -pthread -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/test_trajectory.cpp > CMakeFiles/test_trajectory.dir/src/test_trajectory.i
+
+CMakeFiles/test_trajectory.dir/src/test_trajectory.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_trajectory.dir/src/test_trajectory.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -pthread -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/test_trajectory.cpp -o CMakeFiles/test_trajectory.dir/src/test_trajectory.s
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 CMakeFiles/test_trajectory.dir/src/test_trajectory.o.requires:
 .PHONY : CMakeFiles/test_trajectory.dir/src/test_trajectory.o.requires
@@ -143,6 +174,10 @@ CMakeFiles/test_trajectory.dir/clean:
 .PHONY : CMakeFiles/test_trajectory.dir/clean
 
 CMakeFiles/test_trajectory.dir/depend:
+<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles/test_trajectory.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles/test_trajectory.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : CMakeFiles/test_trajectory.dir/depend
 

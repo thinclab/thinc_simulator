@@ -13,7 +13,8 @@
    args="-param robot_description
    -urdf
    $(arg spawncoords)
-   -model $(arg modelname)"
+   -model $(arg modelname)
+   -robot_namespace $(arg modelname)"
      respawn="false" output="screen"/>
      
    <!-- start robot state publisher -->

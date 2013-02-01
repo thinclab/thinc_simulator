@@ -30,7 +30,11 @@ boost/thread.hpp
 boost/bind.hpp
 -
 
+<<<<<<< HEAD
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/diffdrive_plugin_6w.cpp
+=======
+/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/diffdrive_plugin_6w.cpp
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 algorithm
 -
 assert.h
@@ -38,9 +42,15 @@ assert.h
 hector_gazebo_plugins/diffdrive_plugin_6w.h
 -
 common/Events.hh
+<<<<<<< HEAD
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/common/Events.hh
 physics/physics.h
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/physics/physics.h
+=======
+/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/common/Events.hh
+physics/physics.h
+/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/physics/physics.h
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 ros/ros.h
 -
 tf/transform_broadcaster.h

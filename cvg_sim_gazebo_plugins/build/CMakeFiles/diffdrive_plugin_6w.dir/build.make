@@ -32,10 +32,17 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
+=======
+CMAKE_SOURCE_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 # Include any dependencies generated for this target.
 include CMakeFiles/diffdrive_plugin_6w.dir/depend.make
@@ -82,10 +89,17 @@ CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/st
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/share/nav_msgs/manifest.xml
+<<<<<<< HEAD
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/manifest.xml
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/stacks/image_common/camera_calibration_parsers/manifest.xml
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/stacks/image_common/camera_info_manager/manifest.xml
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /home/emily/fuerte_workspace/sandbox/ardrone_autonomy/manifest.xml
+=======
+CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/manifest.xml
+CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/stacks/image_common/camera_calibration_parsers/manifest.xml
+CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/stacks/image_common/camera_info_manager/manifest.xml
+CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /home/dmillard/fuerte_workspace/sandbox/ardrone_autonomy/manifest.xml
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo_msgs/msg_gen/generated
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo_msgs/srv_gen/generated
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
@@ -94,6 +108,7 @@ CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/st
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/stacks/dynamic_reconfigure/srv_gen/generated
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo/msg_gen/generated
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo/srv_gen/generated
+<<<<<<< HEAD
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg_gen/generated
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /home/emily/fuerte_workspace/sandbox/ardrone_autonomy/msg_gen/generated
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /home/emily/fuerte_workspace/sandbox/ardrone_autonomy/srv_gen/generated
@@ -108,6 +123,22 @@ CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.i: cmake_force
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.s"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -pthread -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/diffdrive_plugin_6w.cpp -o CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.s
+=======
+CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg_gen/generated
+CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /home/dmillard/fuerte_workspace/sandbox/ardrone_autonomy/msg_gen/generated
+CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o: /home/dmillard/fuerte_workspace/sandbox/ardrone_autonomy/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -pthread -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o -c /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/diffdrive_plugin_6w.cpp
+
+CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -pthread -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/diffdrive_plugin_6w.cpp > CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.i
+
+CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -pthread -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/diffdrive_plugin_6w.cpp -o CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.s
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o.requires:
 .PHONY : CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.o.requires
@@ -143,6 +174,10 @@ CMakeFiles/diffdrive_plugin_6w.dir/clean:
 .PHONY : CMakeFiles/diffdrive_plugin_6w.dir/clean
 
 CMakeFiles/diffdrive_plugin_6w.dir/depend:
+<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles/diffdrive_plugin_6w.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles/diffdrive_plugin_6w.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : CMakeFiles/diffdrive_plugin_6w.dir/depend
 

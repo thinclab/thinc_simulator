@@ -76,7 +76,7 @@ xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
         <farClip>100</farClip>
         <updateRate>${update_rate}</updateRate>
         <controller:gazebo_ros_depth_camera name="${name}_camera_controller" plugin="libgazebo_ros_depth_camera.so">
-	  <cameraName>/${sim_name}/${name}</cameraName>
+	  <cameraName>${sim_name}/${name}</cameraName>
           <alwaysOn>true</alwaysOn>
           <updateRate>${update_rate}</updateRate>
           <imageTopicName>${sim_name}/${name}/image_raw</imageTopicName>

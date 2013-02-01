@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/emily/fuerte_workspace/sandbox/tum_simulator/message_to_tf/src/message_to_tf.cpp
+=======
+/home/dmillard/fuerte_workspace/sandbox/tum_simulator/message_to_tf/src/message_to_tf.cpp
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 ros/ros.h
 -
 nav_msgs/Odometry.h

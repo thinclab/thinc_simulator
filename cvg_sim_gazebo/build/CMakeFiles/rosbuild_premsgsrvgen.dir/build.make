@@ -32,10 +32,17 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build
+=======
+CMAKE_SOURCE_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 # Utility rule file for rosbuild_premsgsrvgen.
 
@@ -57,6 +64,10 @@ CMakeFiles/rosbuild_premsgsrvgen.dir/clean:
 .PHONY : CMakeFiles/rosbuild_premsgsrvgen.dir/clean
 
 CMakeFiles/rosbuild_premsgsrvgen.dir/depend:
+<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build/CMakeFiles/rosbuild_premsgsrvgen.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build/CMakeFiles/rosbuild_premsgsrvgen.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : CMakeFiles/rosbuild_premsgsrvgen.dir/depend
 

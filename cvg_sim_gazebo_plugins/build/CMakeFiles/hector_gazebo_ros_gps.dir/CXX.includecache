@@ -22,6 +22,7 @@ hector_gazebo_plugins/sensor_model.h
 gazebo/sdf/sdf.h
 -
 
+<<<<<<< HEAD
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/gazebo_ros_gps.cpp
 hector_gazebo_plugins/gazebo_ros_gps.h
 -
@@ -29,6 +30,15 @@ common/Events.hh
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/common/Events.hh
 physics/physics.h
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/physics/physics.h
+=======
+/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/gazebo_ros_gps.cpp
+hector_gazebo_plugins/gazebo_ros_gps.h
+-
+common/Events.hh
+/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/common/Events.hh
+physics/physics.h
+/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/physics/physics.h
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 /opt/ros/fuerte/include/XmlRpcDecl.h
 ros/macros.h

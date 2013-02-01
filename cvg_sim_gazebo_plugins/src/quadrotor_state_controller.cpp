@@ -98,6 +98,10 @@ void GazeboQuadrotorStateController::Load(physics::ModelPtr _model, sdf::Element
   {
     link = _model->GetLink();
     link_name_ = link->GetName();
+
+    /// WARNING
+    link_name_ = _sdf->GetElement("bodyName")->GetValueString();
+    link = boost::shared_dynamic_cast<physics::Link>(world->GetEntity(link_name_));
   }
   else {
     link_name_ = _sdf->GetElement("bodyName")->GetValueString();

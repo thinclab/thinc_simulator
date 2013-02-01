@@ -32,10 +32,17 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
+=======
+CMAKE_SOURCE_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 # Utility rule file for ROSBUILD_gensrv_py.
 
@@ -45,9 +52,15 @@ include CMakeFiles/ROSBUILD_gensrv_py.dir/progress.make
 CMakeFiles/ROSBUILD_gensrv_py: ../src/cvg_sim_gazebo_plugins/srv/__init__.py
 
 ../src/cvg_sim_gazebo_plugins/srv/__init__.py: ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_gazebo_plugins/srv/__init__.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --initpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/srv/SetBias.srv
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_gazebo_plugins/srv/__init__.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --initpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/srv/SetBias.srv
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: ../srv/SetBias.srv
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
@@ -87,10 +100,17 @@ CMakeFiles/ROSBUILD_gensrv_py: ../src/cvg_sim_gazebo_plugins/srv/__init__.py
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/share/nav_msgs/manifest.xml
+<<<<<<< HEAD
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/manifest.xml
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/stacks/image_common/camera_calibration_parsers/manifest.xml
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/stacks/image_common/camera_info_manager/manifest.xml
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /home/emily/fuerte_workspace/sandbox/ardrone_autonomy/manifest.xml
+=======
+../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/manifest.xml
+../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/stacks/image_common/camera_calibration_parsers/manifest.xml
+../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/stacks/image_common/camera_info_manager/manifest.xml
+../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /home/dmillard/fuerte_workspace/sandbox/ardrone_autonomy/manifest.xml
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo_msgs/msg_gen/generated
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo_msgs/srv_gen/generated
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
@@ -99,12 +119,21 @@ CMakeFiles/ROSBUILD_gensrv_py: ../src/cvg_sim_gazebo_plugins/srv/__init__.py
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/stacks/dynamic_reconfigure/srv_gen/generated
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo/msg_gen/generated
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo/srv_gen/generated
+<<<<<<< HEAD
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg_gen/generated
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /home/emily/fuerte_workspace/sandbox/ardrone_autonomy/msg_gen/generated
 ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /home/emily/fuerte_workspace/sandbox/ardrone_autonomy/srv_gen/generated
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/srv/SetBias.srv
+=======
+../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg_gen/generated
+../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /home/dmillard/fuerte_workspace/sandbox/ardrone_autonomy/msg_gen/generated
+../src/cvg_sim_gazebo_plugins/srv/_SetBias.py: /home/dmillard/fuerte_workspace/sandbox/ardrone_autonomy/srv_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_gazebo_plugins/srv/_SetBias.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/srv/SetBias.srv
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 ROSBUILD_gensrv_py: CMakeFiles/ROSBUILD_gensrv_py
 ROSBUILD_gensrv_py: ../src/cvg_sim_gazebo_plugins/srv/__init__.py
@@ -121,6 +150,10 @@ CMakeFiles/ROSBUILD_gensrv_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_gensrv_py.dir/clean
 
 CMakeFiles/ROSBUILD_gensrv_py.dir/depend:
+<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles/ROSBUILD_gensrv_py.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles/ROSBUILD_gensrv_py.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : CMakeFiles/ROSBUILD_gensrv_py.dir/depend
 

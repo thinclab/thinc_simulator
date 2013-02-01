@@ -12,11 +12,19 @@ common/Plugin.hh
 ros/ros.h
 -
 
+<<<<<<< HEAD
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/reset_plugin.cpp
 hector_gazebo_plugins/reset_plugin.h
 -
 common/Events.hh
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/common/Events.hh
+=======
+/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/reset_plugin.cpp
+hector_gazebo_plugins/reset_plugin.h
+-
+common/Events.hh
+/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/common/Events.hh
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 std_msgs/String.h
 -
 

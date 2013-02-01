@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_test
+=======
+# Install script for directory: /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_test
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +42,13 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
+<<<<<<< HEAD
 FILE(WRITE "/home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_test/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
   FILE(APPEND "/home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_test/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+=======
+FILE(WRITE "/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_test/build/${CMAKE_INSTALL_MANIFEST}" "")
+FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
+  FILE(APPEND "/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_test/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 ENDFOREACH(file)

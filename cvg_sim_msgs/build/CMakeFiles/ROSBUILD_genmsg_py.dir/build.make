@@ -32,10 +32,17 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build
+=======
+CMAKE_SOURCE_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 # Utility rule file for ROSBUILD_genmsg_py.
 
@@ -44,6 +51,7 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 
 CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 
+<<<<<<< HEAD
 ../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_RawMagnetic.py
 ../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_AttitudeCommand.py
 ../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_RC.py
@@ -109,6 +117,33 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_Supply.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/Supply.msg
+=======
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_MotorStatus.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_RawRC.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_MotorPWM.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_VelocityXYCommand.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_ThrustCommand.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_ControllerState.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_Altitude.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_VelocityZCommand.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_Compass.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_YawrateCommand.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_MotorCommand.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_PositionXYCommand.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_ServoCommand.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_AttitudeCommand.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_RawImu.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_RC.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_RuddersCommand.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_RawMagnetic.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_Supply.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_Altimeter.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_HeadingCommand.py
+../src/cvg_sim_msgs/msg/__init__.py: ../src/cvg_sim_msgs/msg/_HeightCommand.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/__init__.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/MotorStatus.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/RawRC.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/MotorPWM.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/VelocityXYCommand.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/ThrustCommand.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/ControllerState.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/Altitude.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/VelocityZCommand.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/Compass.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/YawrateCommand.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/MotorCommand.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/PositionXYCommand.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/ServoCommand.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/AttitudeCommand.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/RawImu.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/RC.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/RuddersCommand.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/RawMagnetic.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/Supply.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/Altimeter.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/HeadingCommand.msg /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/HeightCommand.msg
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 ../src/cvg_sim_msgs/msg/_MotorStatus.py: ../msg/MotorStatus.msg
 ../src/cvg_sim_msgs/msg/_MotorStatus.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -116,6 +151,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 ../src/cvg_sim_msgs/msg/_MotorStatus.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
 ../src/cvg_sim_msgs/msg/_MotorStatus.py: ../manifest.xml
 ../src/cvg_sim_msgs/msg/_MotorStatus.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_MotorStatus.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/MotorStatus.msg
@@ -129,6 +165,31 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_ThrustCommand.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/ThrustCommand.msg
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_MotorStatus.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/MotorStatus.msg
+
+../src/cvg_sim_msgs/msg/_RawRC.py: ../msg/RawRC.msg
+../src/cvg_sim_msgs/msg/_RawRC.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_RawRC.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_RawRC.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_RawRC.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_RawRC.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_RawRC.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/RawRC.msg
+
+../src/cvg_sim_msgs/msg/_MotorPWM.py: ../msg/MotorPWM.msg
+../src/cvg_sim_msgs/msg/_MotorPWM.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_MotorPWM.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_MotorPWM.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_MotorPWM.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_MotorPWM.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_MotorPWM.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/MotorPWM.msg
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 ../src/cvg_sim_msgs/msg/_VelocityXYCommand.py: ../msg/VelocityXYCommand.msg
 ../src/cvg_sim_msgs/msg/_VelocityXYCommand.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -136,6 +197,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 ../src/cvg_sim_msgs/msg/_VelocityXYCommand.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
 ../src/cvg_sim_msgs/msg/_VelocityXYCommand.py: ../manifest.xml
 ../src/cvg_sim_msgs/msg/_VelocityXYCommand.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_VelocityXYCommand.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/VelocityXYCommand.msg
@@ -159,6 +221,21 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_RawRC.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/RawRC.msg
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_VelocityXYCommand.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/VelocityXYCommand.msg
+
+../src/cvg_sim_msgs/msg/_ThrustCommand.py: ../msg/ThrustCommand.msg
+../src/cvg_sim_msgs/msg/_ThrustCommand.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_ThrustCommand.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_ThrustCommand.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_ThrustCommand.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_ThrustCommand.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_ThrustCommand.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/ThrustCommand.msg
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 ../src/cvg_sim_msgs/msg/_ControllerState.py: ../msg/ControllerState.msg
 ../src/cvg_sim_msgs/msg/_ControllerState.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -166,6 +243,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 ../src/cvg_sim_msgs/msg/_ControllerState.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
 ../src/cvg_sim_msgs/msg/_ControllerState.py: ../manifest.xml
 ../src/cvg_sim_msgs/msg/_ControllerState.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_ControllerState.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/ControllerState.msg
@@ -209,6 +287,41 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_Altimeter.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/Altimeter.msg
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_ControllerState.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/ControllerState.msg
+
+../src/cvg_sim_msgs/msg/_Altitude.py: ../msg/Altitude.msg
+../src/cvg_sim_msgs/msg/_Altitude.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_Altitude.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_Altitude.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_Altitude.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_Altitude.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_Altitude.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/Altitude.msg
+
+../src/cvg_sim_msgs/msg/_VelocityZCommand.py: ../msg/VelocityZCommand.msg
+../src/cvg_sim_msgs/msg/_VelocityZCommand.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_VelocityZCommand.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_VelocityZCommand.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_VelocityZCommand.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_VelocityZCommand.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_VelocityZCommand.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/VelocityZCommand.msg
+
+../src/cvg_sim_msgs/msg/_Compass.py: ../msg/Compass.msg
+../src/cvg_sim_msgs/msg/_Compass.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_Compass.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_Compass.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_Compass.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_Compass.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_Compass.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/Compass.msg
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 ../src/cvg_sim_msgs/msg/_YawrateCommand.py: ../msg/YawrateCommand.msg
 ../src/cvg_sim_msgs/msg/_YawrateCommand.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -216,6 +329,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 ../src/cvg_sim_msgs/msg/_YawrateCommand.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
 ../src/cvg_sim_msgs/msg/_YawrateCommand.py: ../manifest.xml
 ../src/cvg_sim_msgs/msg/_YawrateCommand.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_YawrateCommand.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/YawrateCommand.msg
@@ -229,6 +343,11 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_VelocityZCommand.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/VelocityZCommand.msg
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_YawrateCommand.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/YawrateCommand.msg
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 ../src/cvg_sim_msgs/msg/_MotorCommand.py: ../msg/MotorCommand.msg
 ../src/cvg_sim_msgs/msg/_MotorCommand.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -236,6 +355,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 ../src/cvg_sim_msgs/msg/_MotorCommand.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
 ../src/cvg_sim_msgs/msg/_MotorCommand.py: ../manifest.xml
 ../src/cvg_sim_msgs/msg/_MotorCommand.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_MotorCommand.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/MotorCommand.msg
@@ -259,6 +379,41 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_HeightCommand.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/HeightCommand.msg
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_MotorCommand.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/MotorCommand.msg
+
+../src/cvg_sim_msgs/msg/_PositionXYCommand.py: ../msg/PositionXYCommand.msg
+../src/cvg_sim_msgs/msg/_PositionXYCommand.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_PositionXYCommand.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_PositionXYCommand.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_PositionXYCommand.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_PositionXYCommand.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_PositionXYCommand.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/PositionXYCommand.msg
+
+../src/cvg_sim_msgs/msg/_ServoCommand.py: ../msg/ServoCommand.msg
+../src/cvg_sim_msgs/msg/_ServoCommand.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_ServoCommand.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_ServoCommand.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_ServoCommand.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_ServoCommand.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_ServoCommand.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/ServoCommand.msg
+
+../src/cvg_sim_msgs/msg/_AttitudeCommand.py: ../msg/AttitudeCommand.msg
+../src/cvg_sim_msgs/msg/_AttitudeCommand.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_AttitudeCommand.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_AttitudeCommand.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_AttitudeCommand.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_AttitudeCommand.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_AttitudeCommand.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/AttitudeCommand.msg
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 ../src/cvg_sim_msgs/msg/_RawImu.py: ../msg/RawImu.msg
 ../src/cvg_sim_msgs/msg/_RawImu.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -266,6 +421,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
 ../src/cvg_sim_msgs/msg/_RawImu.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
 ../src/cvg_sim_msgs/msg/_RawImu.py: ../manifest.xml
 ../src/cvg_sim_msgs/msg/_RawImu.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_RawImu.py"
 	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/RawImu.msg
@@ -314,6 +470,106 @@ ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_HeightCommand.py
 ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_RawImu.py
 ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_Compass.py
 ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_MotorPWM.py
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_RawImu.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/RawImu.msg
+
+../src/cvg_sim_msgs/msg/_RC.py: ../msg/RC.msg
+../src/cvg_sim_msgs/msg/_RC.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_RC.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_RC.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_RC.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_RC.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_RC.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/RC.msg
+
+../src/cvg_sim_msgs/msg/_RuddersCommand.py: ../msg/RuddersCommand.msg
+../src/cvg_sim_msgs/msg/_RuddersCommand.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_RuddersCommand.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_RuddersCommand.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_RuddersCommand.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_RuddersCommand.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_RuddersCommand.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/RuddersCommand.msg
+
+../src/cvg_sim_msgs/msg/_RawMagnetic.py: ../msg/RawMagnetic.msg
+../src/cvg_sim_msgs/msg/_RawMagnetic.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_RawMagnetic.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_RawMagnetic.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_RawMagnetic.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_RawMagnetic.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_RawMagnetic.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/RawMagnetic.msg
+
+../src/cvg_sim_msgs/msg/_Supply.py: ../msg/Supply.msg
+../src/cvg_sim_msgs/msg/_Supply.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_Supply.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_Supply.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_Supply.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_Supply.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_Supply.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/Supply.msg
+
+../src/cvg_sim_msgs/msg/_Altimeter.py: ../msg/Altimeter.msg
+../src/cvg_sim_msgs/msg/_Altimeter.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_Altimeter.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_Altimeter.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_Altimeter.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_Altimeter.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_Altimeter.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/Altimeter.msg
+
+../src/cvg_sim_msgs/msg/_HeadingCommand.py: ../msg/HeadingCommand.msg
+../src/cvg_sim_msgs/msg/_HeadingCommand.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_HeadingCommand.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_HeadingCommand.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_HeadingCommand.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_HeadingCommand.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_HeadingCommand.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/HeadingCommand.msg
+
+../src/cvg_sim_msgs/msg/_HeightCommand.py: ../msg/HeightCommand.msg
+../src/cvg_sim_msgs/msg/_HeightCommand.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/cvg_sim_msgs/msg/_HeightCommand.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/cvg_sim_msgs/msg/_HeightCommand.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/cvg_sim_msgs/msg/_HeightCommand.py: ../manifest.xml
+../src/cvg_sim_msgs/msg/_HeightCommand.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/cvg_sim_msgs/msg/_HeightCommand.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg/HeightCommand.msg
+
+ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/__init__.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_MotorStatus.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_RawRC.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_MotorPWM.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_VelocityXYCommand.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_ThrustCommand.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_ControllerState.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_Altitude.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_VelocityZCommand.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_Compass.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_YawrateCommand.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_MotorCommand.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_PositionXYCommand.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_ServoCommand.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_AttitudeCommand.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_RawImu.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_RC.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_RuddersCommand.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_RawMagnetic.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_Supply.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_Altimeter.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_HeadingCommand.py
+ROSBUILD_genmsg_py: ../src/cvg_sim_msgs/msg/_HeightCommand.py
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py.dir/build.make
 .PHONY : ROSBUILD_genmsg_py
 
@@ -326,6 +582,10 @@ CMakeFiles/ROSBUILD_genmsg_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_py.dir/depend:
+<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/depend
 

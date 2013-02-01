@@ -4,8 +4,13 @@
 CMakeFiles/hector_gazebo_ros_baro.dir/src/gazebo_ros_baro.o
  ../include/hector_gazebo_plugins/sensor_model.h
  ../include/hector_quadrotor_gazebo_plugins/gazebo_ros_baro.h
+<<<<<<< HEAD
  /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/gazebo_ros_baro.cpp
  /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg_gen/cpp/include/cvg_sim_msgs/Altimeter.h
+=======
+ /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/gazebo_ros_baro.cpp
+ /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/msg_gen/cpp/include/cvg_sim_msgs/Altimeter.h
+>>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
  /opt/ros/fuerte/include/XmlRpcDecl.h
  /opt/ros/fuerte/include/XmlRpcValue.h
  /opt/ros/fuerte/include/geometry_msgs/Point.h
