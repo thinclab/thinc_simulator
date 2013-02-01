@@ -57,7 +57,6 @@ int main(int argc, char* argv[]) {
                 output += "  <link name=\"base_link\">\n";
             else
                 output += "  <link name=\"link" + count + "\">\n";
-            counter++;
 
             output += "    <inertial>\n";
             output += "      <origin xyz=\"" + col_pos + " " + row_pos + " 0\"/>\n";
@@ -69,9 +68,12 @@ int main(int argc, char* argv[]) {
             output += "      <geometry>\n";
             output += "        <box size=\"" + width + " " + height + " 0.1\" />\n";
             output += "      </geometry>\n";
-            output += "      <material name=\"blue\">\n";
-            output += "        <color rgba=\"0 0 .8 1\"/>\n";
-            output += "      </material>\n";
+            
+            if (i%2 && j%2 || !i%2 && !j%2)
+                output += WHITE; 
+            else
+                output += BLUE; 
+
             output += "    </visual>\n";
             output += "    <collision>\n";
             output += "      <origin xyz=\"" + col_pos + " " + row_pos + " 0\"/>\n";
@@ -83,6 +85,15 @@ int main(int argc, char* argv[]) {
             output += "  <gazebo>\n";
             output += "    <static>true</static>\n";
             output += "  </gazebo>\n\n\n";
+
+            if (i != 0 && j != 0) {
+                output += "  <joint name=\"base_to_link" + count + "\" type=\"fixed\">\n";
+                output += "    <parent link=\"base_link\"/>\n";
+                output += "    <child link=\"link" + count + "\"/>\n";
+                output += "    <origin xyz=\"0 0 0\"/>\n";
+                output += "  </joint>\n";
+            }
+            counter++; 
         }
     }
 
