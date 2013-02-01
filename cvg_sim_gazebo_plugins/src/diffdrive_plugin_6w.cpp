@@ -88,6 +88,8 @@ void DiffDrivePlugin6W::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
   else
     topicName = _sdf->GetElement("topicName")->GetValueString();
 
+  ROS_INFO("topic for diffdrive is %s ####################################", topicName.c_str());
+
   if (!_sdf->HasElement("bodyName"))
   {
     link = _model->GetLink();
