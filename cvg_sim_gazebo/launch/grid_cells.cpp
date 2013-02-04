@@ -21,59 +21,57 @@ int main(int argc, char* argv[]) {
 
     //convert arguments to ints
     int columns, rows, cell_width, cell_height; 
-    stringstream s1(c); 
-    s1 >> columns;
-    stringstream s2(r); 
-    s2 >> rows;  
-    stringstream s3(width); 
-    s3 >> cell_width; 
-    stringstream s4(height); 
-    s4 >> cell_height; 
-   
+    stringstream s1(c); stringstream s2(r); 
+    stringstream s3(width); stringstream s4(height); 
+    s1 >> columns; s2 >> rows;  
+    s3 >> cell_width; s4 >> cell_height;
+
     //define colors
-    string WHITE = "      <material name=\"white\">\n        <color rgba=\"1 1 1 1\"/>\n      </material>\n";
-    string BLUE = "      <material name=\"blue\">\n        <color rgba=\"0 0 0.8 1\"/>\n      </material>\n";
+    string COLOR1 = "    <material>Gazebo/Red</material>\n";
+    string COLOR2 = "    <material>Gazebo/Green</material>\n";
 
 
-    bool color = true;
-    int counter = 0;  
-    output += "<?xml version=\"1.0\"?>\n\n\n<robot name=\"grid\">\n";
+    bool color = true; //to alternate colors
+    bool first_color = true; //to alternate starting color of rows
+    int c_int = 0; //to count up for naming links
+    
+    //begin .urdf text:
+    output += "<?xml version=\"1.0\"?>\n\n\n<robot name=\"grid\">\n\n";
+    output += "  <link name=\"base_link\"/>\n\n";
 
+    //create each link in the .urdf
     for (int i = 0; i < columns; i++) {
         for (int j = 0; j < rows; j++) {
-            //convert position coordinates for grid to strings
-            string col_pos, row_pos, count; 
-            stringstream s5;
-            s5 << i * cell_width;
-            col_pos = s5.str(); ;
-            stringstream s6;
-            s6 << j * cell_height;
-            row_pos = s6.str();
-            stringstream s7; 
-            s7 << counter; 
-            count = s7.str(); 
-            
-            if (i== 0 && j == 0)
-                output += "  <link name=\"base_link\">\n";
-            else
-                output += "  <link name=\"link" + count + "\">\n";
 
+            //set the starting color for the row
+            if (j == 0 && first_color) {
+                color = false; 
+                first_color = false; 
+            }
+            else if (j == 0 && !first_color) {
+                color = true; 
+                first_color = true; 
+            }
+
+            //convert origin coordinates for cell to strings
+            string col_pos, row_pos, c_str; 
+            stringstream s5, s6, s7;
+            s5 << i * cell_width; s6 << j * cell_height; 
+            s7 << c_int;
+            col_pos = s5.str(); row_pos = s6.str(); c_str = s7.str(); 
+           
+            //write link name and info 
+            output += "  <link name=\"link" + c_str + "\">\n";
             output += "    <inertial>\n";
             output += "      <origin xyz=\"" + col_pos + " " + row_pos + " 0\"/>\n";
             output += "      <mass value=\"1.0\" />\n";
-            output += "      <inertia  ixx=\"1.0\" ixy=\"0.0\"  ixz=\"0.0\"  iyy=\"100.0\"  iyz=\"0.0\"  izz=\"1.0\" />\n";
+            output += "      <inertia  ixx=\"0.0\" ixy=\"0.0\"  ixz=\"0.0\"  iyy=\"0.0\"  iyz=\"0.0\"  izz=\"0.0\" />\n";
             output += "    </inertial>\n";
             output += "    <visual>\n";
             output += "      <origin xyz=\"" + col_pos + " " + row_pos + " 0\"/>\n";
             output += "      <geometry>\n";
             output += "        <box size=\"" + width + " " + height + " 0.1\" />\n";
             output += "      </geometry>\n";
-            
-            if (i%2 && j%2 || !i%2 && !j%2)
-                output += BLUE; 
-            else
-                output += WHITE; 
-
             output += "    </visual>\n";
             output += "    <collision>\n";
             output += "      <origin xyz=\"" + col_pos + " " + row_pos + " 0\"/>\n";
@@ -81,19 +79,29 @@ int main(int argc, char* argv[]) {
             output += "        <box size=\"" + width + " " + height + " 0.1\" />\n";
             output += "      </geometry>\n";
             output += "    </collision>\n";
-            output += "  </link>\n";
-            output += "  <gazebo>\n";
-            output += "    <static>true</static>\n";
-            output += "  </gazebo>\n\n\n";
-
-            if (!(i == 0 && j == 0)) {
-                output += "  <joint name=\"base_to_link" + count + "\" type=\"fixed\">\n";
-                output += "    <parent link=\"base_link\"/>\n";
-                output += "    <child link=\"link" + count + "\"/>\n";
-                output += "    <origin xyz=\"0 0 0\"/>\n";
-                output += "  </joint>\n";
+            output += "  </link>\n\n";
+            output += "  <gazebo reference=\"link" + c_str + "\">\n";
+         
+            //write color
+            if (color) {
+                output += COLOR1;
+                color = false; 
             }
-            counter++; 
+            else {
+                output += COLOR2;
+                color = true; 
+            }
+
+            output += "    <static>true</static>\n";
+            output += "  </gazebo>\n\n";
+
+            //create joint to base link
+            output += "  <joint name=\"base_to_link" + c_str + "\" type=\"fixed\">\n";
+            output += "    <parent link=\"base_link\"/>\n";
+            output += "    <child link=\"link" + c_str + "\"/>\n";
+            output += "    <origin xyz=\"0 0 0\"/>\n";
+            output += "  </joint>\n\n\n";
+            c_int++; 
         }
     }
 
