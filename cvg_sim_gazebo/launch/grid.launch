@@ -1,19 +1,10 @@
 <?xml version="1.0"?>
 
 <launch>
-<!--   <arg name="model" default="$(find cvg_sim_gazebo)/launch/grid.urdf.xacro"/>
-   <arg name="cell_width" default="2"/>
-   <arg name="cell_height" default="2"/>
-   <arg name="columns" default="5"/>
-   <arg name="rows" default="5"/>-->
+  <!-- send grid urdf to param server -->
+  <param name="grid_description" command="$(find xacro)/xacro.py $(find cvg_sim_gazebo)/launch/grid.urdf.xacro" />
 
-   <!-- send grid urdf to param server -->
-   <param name="grid_description" command="$(find cvg_sim_gazebo)/launch/grid.urdf.xacro"/>
-
-   <!-- push grid_description to factory and spawn robot in gazebo -->
-<!--   <node name="spawn_grid" pkg="gazebo" type="spawn_model" args="-urdf -param grid_description -cell_width 2 -cell_height 2 -columns 5 -rows 5 -model grid_model" respawn="false" output="screen" />-->
-
-   <node name="spawn_grid" pkg="gazebo" type="spawn_model" args="-urdf -param grid_description -modell grid_model" respawn="false" output="screen"/>
-
+  <!-- push grid_description to factory and spawn robot in gazebo -->
+  <node name="spawn_grid" pkg="gazebo" type="spawn_model" args="-urdf -param grid_description -z 0.5 -model grid_model" respawn="false" output="screen" />
 </launch>
 
