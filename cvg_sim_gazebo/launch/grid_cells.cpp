@@ -4,7 +4,14 @@
 #include <sstream>
 #include <cstdlib>
 
+//opencv2
+#include "opencv2/core/core.hpp"
+#include "opencv2/highgui/highgui.hpp"
+
+#define w 400
+
 using namespace std; 
+using namespace cv; 
 
 int main(int argc, char* argv[]) {
     if (argc != 5) {
@@ -26,13 +33,66 @@ int main(int argc, char* argv[]) {
     s1 >> columns; s2 >> rows;  
     s3 >> cell_width; s4 >> cell_height;
 
+    //determine size of the image
+    int pixels_per_meter = 100;
+    int x_pixels = cell_width*rows*pixels_per_meter;
+    int y_pixels = cell_height*columns*pixels_per_meter; 
+    cell_width *= pixels_per_meter;
+    cell_height *= pixels_per_meter;
+
+    //create matrix and window
+    Mat grid_image = Mat::zeros(x_pixels, y_pixels, CV_8UC3);
+    char grid_window[] = "Grid";
+
+    //create squares
+    bool color = true; //to alternate colors
+    bool first_color = true; //to alternate starting color of rows
+ 
+    for (int i = 0; i < columns; i++) {
+        for (int j = 0; j < rows; j++) {
+
+            //set the starting color for the row
+            if (j == 0 && first_color) {
+                color = false;
+                first_color = false;
+            }
+            else if (j == 0 && !first_color) {
+                color = true;
+                first_color = true;
+            }
+
+            if (color) {
+                rectangle(grid_image, Point(i*cell_width, j*cell_height), 
+                    Point((i+1)*cell_width, (j+1)*cell_height),
+                    Scalar(102, 0, 255), -1, 8);//pink
+                color = false; 
+            }
+            else {
+                rectangle(grid_image, Point(i*cell_width, j*cell_height), 
+                    Point((i+1)*cell_width, (j+1)*cell_height),
+                    Scalar(51, 204, 0), -1, 8);//green
+                color = true; 
+            }
+        }
+    }
+
+    imshow(grid_window, grid_image);
+    imwrite("grid.png", grid_image);
+//    cvMoveWindow(grid_window, 0, 200);
+
+    waitKey(0);
+
+
+    
+/*
+
     //define colors
     string COLOR1 = "    <material>Gazebo/Red</material>\n";
     string COLOR2 = "    <material>Gazebo/Green</material>\n";
 
 
-    bool color = true; //to alternate colors
-    bool first_color = true; //to alternate starting color of rows
+    //bool color = true; //to alternate colors
+    //bool first_color = true; //to alternate starting color of rows
     int c_int = 0; //to count up for naming links
     
     //begin .urdf text:
@@ -112,5 +172,5 @@ int main(int argc, char* argv[]) {
     ofs.open("grid.urdf.xacro", ios::trunc);  
     if (ofs.is_open()) 
         ofs << output; 
-    ofs.close(); 
+    ofs.close(); */
 }
