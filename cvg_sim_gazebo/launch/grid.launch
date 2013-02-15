@@ -1,10 +1,15 @@
 <?xml version="1.0"?>
-
 <launch>
-  <!-- send grid urdf to param server -->
-  <param name="grid_description" command="$(find xacro)/xacro.py $(find cvg_sim_gazebo)/launch/grid.urdf.xacro" />
+  <arg name="gui" default="true"/>
+  
+  <param name="/use_sim_time" value="true" />
 
-  <!-- push grid_description to factory and spawn robot in gazebo -->
-  <node name="spawn_grid" pkg="gazebo" type="spawn_model" args="-urdf -param grid_description -z 0.5 -model grid_model" respawn="false" output="screen" />
+  <node name="gazebo" pkg="gazebo" type="gazebo" args="$(find cvg_sim_gazebo)/worlds/grid.world" respawn="false" output="screen"/>
+    <!-- start gui -->
+  <group if="$(arg gui)">
+    <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen" required="true"/>
+  </group>
+
 </launch>
+
 

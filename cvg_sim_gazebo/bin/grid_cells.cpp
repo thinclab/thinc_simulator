@@ -77,7 +77,7 @@ int main(int argc, char* argv[]) {
     }
 
     imshow(grid_window, grid_image);
-    imwrite("grid.png", grid_image);
+    imwrite("../Media/models/grid/material_1.png", grid_image);
 //    cvMoveWindow(grid_window, 0, 200);
 
     waitKey(0);
