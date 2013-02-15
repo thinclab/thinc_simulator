@@ -5,6 +5,6 @@
   <param name="grid_description" command="$(find xacro)/xacro.py $(find cvg_sim_gazebo)/launch/grid.urdf.xacro" />
 
   <!-- push grid_description to factory and spawn robot in gazebo -->
-  <node name="spawn_grid" pkg="gazebo" type="spawn_model" args="-urdf -param grid_description -z 0.5 -model grid_model" respawn="false" output="screen" />
+  <node name="spawn_grid" pkg="gazebo" type="spawn_model" args="-urdf -param grid_description -z 1 -model grid_model" respawn="false" output="screen" />
 </launch>
 
