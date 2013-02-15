@@ -9,7 +9,4 @@
   <group if="$(arg gui)">
     <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen" required="true"/>
   </group>
-
 </launch>
-
-
