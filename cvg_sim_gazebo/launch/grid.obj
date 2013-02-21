@@ -1,0 +1,42 @@
+#Define material
+mtllib grid.mtl
+
+#List of vertices
+v 0.0 0.0 0.1
+v 5.0 0.0 0.1
+v 5.0 5.0 0.1
+v 0.0 5.0 0.1
+v 0.0 0.0 0.0
+v 5.0 0.0 0.0
+v 5.0 5.0 0.0
+v 0.0 5.0 0.0
+
+#List of texture coordinates
+
+#Normals in (x,y,z)
+vn 0.0 0.0 0.1
+vn 0.0 0.0 -0.1
+vn 0.0 5.0 0.0
+vn 0.0 -5.0 0.0
+vn 5.0 0.0 0.0
+vn -5.0 0.0 0.0
+
+#Face definitions
+g left 
+f v1 v5 v8 v4
+
+g top
+usemtl grid
+f v1 v4 v3 v2
+
+g front
+f v4 v8 v7 v3
+
+g right
+f v3 v7 v6 v2
+
+g back
+f v2 v6 v5 v1
+
+g bottom
+f v5 v6 v7 v8
