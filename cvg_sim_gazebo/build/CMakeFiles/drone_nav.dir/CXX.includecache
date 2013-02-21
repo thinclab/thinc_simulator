@@ -6,11 +6,31 @@
 
 #IncludeRegexTransform: 
 
+/home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/navigation/drone.cpp
+drone.hpp
+/home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/navigation/drone.hpp
+
+/home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/navigation/drone.hpp
+ros/ros.h
+/home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/navigation/ros/ros.h
+std_msgs/Empty.h
+/home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/navigation/std_msgs/Empty.h
+geometry_msgs/Twist.h
+/home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/navigation/geometry_msgs/Twist.h
+string
+-
+cmath
+-
+
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/navigation/drone_nav.cpp
 drone_nav.hpp
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/navigation/drone_nav.hpp
+drone.cpp
+/home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/navigation/drone.cpp
 
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/navigation/drone_nav.hpp
+drone.hpp
+/home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/navigation/drone.hpp
 ros/ros.h
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/navigation/ros/ros.h
 std_msgs/Empty.h
@@ -20,6 +40,8 @@ geometry_msgs/Twist.h
 string
 -
 vector
+-
+sstream
 -
 
 /opt/ros/fuerte/include/XmlRpcDecl.h
