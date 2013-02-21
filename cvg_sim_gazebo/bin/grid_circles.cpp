@@ -10,27 +10,27 @@
 
 #define w 400
 
-using namespace std; 
-using namespace cv; 
+using namespace std;
+using namespace cv;
 
 int main(int argc, char* argv[]) {
     if (argc != 5) {
-        cout << "You must enter 4 additional arguments."; 
-        exit(1); 
+        cout << "You must enter 4 additional arguments.";
+        exit(1);
     }
-    
+
     //save the arguments
-    string output = ""; 
-    string c = argv[1]; 
-    string r = argv[2]; 
-    string width = argv[3]; 
+    string output = "";
+    string c = argv[1];
+    string r = argv[2];
+    string width = argv[3];
     string height = argv[4];
 
     //convert arguments to ints
-    int columns, rows, cell_width, cell_height; 
-    stringstream s1(c); stringstream s2(r); 
-    stringstream s3(width); stringstream s4(height); 
-    s1 >> columns; s2 >> rows;  
+    int columns, rows, cell_width, cell_height;
+    stringstream s1(c); stringstream s2(r);
+    stringstream s3(width); stringstream s4(height);
+    s1 >> columns; s2 >> rows;
     s3 >> cell_width; s4 >> cell_height;
 
     //determine size of the image
@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
     cell_height *= pixels_per_meter;
     int x_pixels = cell_width*rows;
     int y_pixels = cell_height*columns;
-    
+
     //create matrix and window
     Mat grid_image = Mat::zeros(x_pixels, y_pixels, CV_8UC3);
     char grid_window[] = "Grid";
@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
     //create squares
     bool color = true; //to alternate colors
     bool first_color = true; //to alternate starting color of rows
- 
+
     for (int i = 0; i < columns; i++) {
         for (int j = 0; j < rows; j++) {
 
@@ -62,27 +62,31 @@ int main(int argc, char* argv[]) {
             }
 
             if (color) {
-                rectangle(grid_image, Point(i*cell_width, j*cell_height), 
+                rectangle(grid_image, Point(i*cell_width, j*cell_height),
                     Point((i+1)*cell_width, (j+1)*cell_height),
                     Scalar(102, 0, 255), -1, 8);//pink
-                color = false; 
+                color = false;
+
             }
             else {
-                rectangle(grid_image, Point(i*cell_width, j*cell_height), 
+                rectangle(grid_image, Point(i*cell_width, j*cell_height),
                     Point((i+1)*cell_width, (j+1)*cell_height),
                     Scalar(51, 204, 0), -1, 8);//green
-                color = true; 
+                color = true;
             }
+            circle(grid_image, Point(cell_width*(i+.5), cell_height*(j+.5)),
+	        (cell_width/8), Scalar(255, 255, 255), 
+		cell_width/4, 8, 0); //white
         }
     }
 
     imshow(grid_window, grid_image);
     imwrite("../Media/models/grid/material_1.png", grid_image);
-//    cvMoveWindow(grid_window, 0, 200);
+    //    cvMoveWindow(grid_window, 0, 200);
 
     waitKey(0);
 
-
+                                                                                                                           
     //begin urdf output
     output += "<?xml version=\"1.0\"?>\n\n\n<robot name=\"grid\">\n\n";
     output += "  <link name=\"base_link\">\n";
@@ -90,8 +94,8 @@ int main(int argc, char* argv[]) {
     //convert grid size to strings 
     stringstream s5, s6; string x_size, y_size;
     s5 << x_pixels; s6 << y_pixels;
-    x_size = s5.str(); y_size = s6.str(); 
-           
+    x_size = s5.str(); y_size = s6.str();
+
     //write link name and info 
     output += "    <inertial>\n";
     output += "      <origin xyz=\"0 0 0\"/>\n";
@@ -117,13 +121,14 @@ int main(int argc, char* argv[]) {
     output += "    </material>\n";
     output += "    <static>true</static>\n";
     output += "  </gazebo>\n\n";
-
     output += "</robot>";
 
     //write to file
-    ofstream ofs; 
-    ofs.open("grid.urdf.xacro", ios::trunc);  
-    if (ofs.is_open()) 
-        ofs << output; 
-    ofs.close(); 
-}
+    ofstream ofs;
+    ofs.open("grid.urdf.xacro", ios::trunc);
+    if (ofs.is_open())
+        ofs << output;
+    ofs.close();
+
+
+}                         
