@@ -1,8 +1,7 @@
-all:	grid_cells 
+all:	grid_circles
 
-grid_cells:	grid_cells.cpp
-	g++ -o grid_cells grid_cells.cpp `pkg-config opencv --cflags --libs`
-
-clean: 
-	rm -f grid_cells
+grid_circles:	grid_circles.cpp
+	g++ -o grid_circles grid_circles.cpp  `pkg-config opencv --cflags --libs` 
+clean:
+	rm -f grid_circles
 
