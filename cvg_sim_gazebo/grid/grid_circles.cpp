@@ -122,7 +122,7 @@ int main(int argc, char* argv[]) {
 
     //write to file
     ofstream ofs;
-    ofs.open("grid.urdf.xacro", ios::trunc);
+    ofs.open("../urdf/grid.urdf.xacro", ios::trunc);
     if (ofs.is_open())
         ofs << output;
     ofs.close();
