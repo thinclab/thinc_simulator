@@ -80,7 +80,7 @@ void drone::move_on_grid(int new_x, int new_y) {
 //                    twist_msg.linear.y = 0.25; 
 //                }
             }
-     
+     // PUBLISH MESSAGES
             x_moves--; 
         } 
          
