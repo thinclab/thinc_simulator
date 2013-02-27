@@ -79,6 +79,7 @@ CMakeFiles/drone_nav.dir/navigation/drone_nav.o: /opt/ros/fuerte/stacks/dynamic_
 CMakeFiles/drone_nav.dir/navigation/drone_nav.o: /opt/ros/fuerte/share/ros/core/rosbuild/manifest.xml
 CMakeFiles/drone_nav.dir/navigation/drone_nav.o: /opt/ros/fuerte/stacks/protobuf/manifest.xml
 CMakeFiles/drone_nav.dir/navigation/drone_nav.o: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo/manifest.xml
+CMakeFiles/drone_nav.dir/navigation/drone_nav.o: /opt/ros/fuerte/stacks/vision_opencv/opencv2/manifest.xml
 CMakeFiles/drone_nav.dir/navigation/drone_nav.o: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo_msgs/msg_gen/generated
 CMakeFiles/drone_nav.dir/navigation/drone_nav.o: /opt/ros/fuerte/stacks/simulator_gazebo/gazebo_msgs/srv_gen/generated
 CMakeFiles/drone_nav.dir/navigation/drone_nav.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated

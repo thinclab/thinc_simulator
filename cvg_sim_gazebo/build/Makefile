@@ -174,6 +174,19 @@ drone_nav/fast:
 .PHONY : drone_nav/fast
 
 #=============================================================================
+# Target rules for targets named grid_circles
+
+# Build rule for target.
+grid_circles: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 grid_circles
+.PHONY : grid_circles
+
+# fast build rule for target.
+grid_circles/fast:
+	$(MAKE) -f CMakeFiles/grid_circles.dir/build.make CMakeFiles/grid_circles.dir/build
+.PHONY : grid_circles/fast
+
+#=============================================================================
 # Target rules for targets named rosbuild_precompile
 
 # Build rule for target.
@@ -304,6 +317,21 @@ tests/fast:
 .PHONY : tests/fast
 
 # target to build an object file
+grid/grid_circles.o:
+	$(MAKE) -f CMakeFiles/grid_circles.dir/build.make CMakeFiles/grid_circles.dir/grid/grid_circles.o
+.PHONY : grid/grid_circles.o
+
+# target to preprocess a source file
+grid/grid_circles.i:
+	$(MAKE) -f CMakeFiles/grid_circles.dir/build.make CMakeFiles/grid_circles.dir/grid/grid_circles.i
+.PHONY : grid/grid_circles.i
+
+# target to generate assembly for a file
+grid/grid_circles.s:
+	$(MAKE) -f CMakeFiles/grid_circles.dir/build.make CMakeFiles/grid_circles.dir/grid/grid_circles.s
+.PHONY : grid/grid_circles.s
+
+# target to build an object file
 navigation/drone_nav.o:
 	$(MAKE) -f CMakeFiles/drone_nav.dir/build.make CMakeFiles/drone_nav.dir/navigation/drone_nav.o
 .PHONY : navigation/drone_nav.o
@@ -331,6 +359,7 @@ help:
 	@echo "... clean-test-results"
 	@echo "... drone_nav"
 	@echo "... edit_cache"
+	@echo "... grid_circles"
 	@echo "... rebuild_cache"
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
@@ -342,6 +371,9 @@ help:
 	@echo "... test-results"
 	@echo "... test-results-run"
 	@echo "... tests"
+	@echo "... grid/grid_circles.o"
+	@echo "... grid/grid_circles.i"
+	@echo "... grid/grid_circles.s"
 	@echo "... navigation/drone_nav.o"
 	@echo "... navigation/drone_nav.i"
 	@echo "... navigation/drone_nav.s"

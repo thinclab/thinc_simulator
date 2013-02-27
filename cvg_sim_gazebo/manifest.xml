@@ -10,6 +10,7 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/cvg_sim_gazebo</url>
   <depend package="gazebo"/>
+  <depend package="opencv2"/>
 
   <export>
     <gazebo gazebo_media_path="${prefix}" />

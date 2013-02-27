@@ -1,3 +1,4 @@
+//C++
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -8,12 +9,20 @@
 #include "opencv2/core/core.hpp"
 #include "opencv2/highgui/highgui.hpp"
 
+//ros
+#include "ros/ros.h"
+
 #define w 400
 
 using namespace std;
 using namespace cv;
 
 int main(int argc, char* argv[]) {
+
+    ros::init(argc, argv, "grid_cells");
+    ros::NodeHandle n; 
+    ros::Rate loop_rate(10); 
+
     if (argc != 5) {
         cout << "You must enter 4 additional arguments.";
         exit(1);
@@ -81,9 +90,7 @@ int main(int argc, char* argv[]) {
     }
 
     imwrite("../Media/models/grid/material_1.png", grid_image);
-    waitKey(0);
-
-                                                                                                                           
+    waitKey(0);                                                                                                   
     //begin urdf output
     output += "<?xml version=\"1.0\"?>\n\n\n<robot name=\"grid\">\n\n";
     output += "  <link name=\"base_link\">\n";

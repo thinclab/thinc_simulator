@@ -4,6 +4,7 @@
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build/CMakeFiles/ROSBUILD_gensrv_lisp.dir
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build/CMakeFiles/clean-test-results.dir
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build/CMakeFiles/drone_nav.dir
+/home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build/CMakeFiles/grid_circles.dir
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build/CMakeFiles/rosbuild_precompile.dir
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build/CMakeFiles/rosbuild_premsgsrvgen.dir
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo/build/CMakeFiles/rospack_genmsg.dir
