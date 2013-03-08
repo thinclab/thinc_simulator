@@ -32,17 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
-=======
-CMAKE_SOURCE_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 # Utility rule file for clean-test-results.
 
@@ -50,11 +43,7 @@ CMAKE_BINARY_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim
 include CMakeFiles/clean-test-results.dir/progress.make
 
 CMakeFiles/clean-test-results:
-<<<<<<< HEAD
 	if ! rm -rf /home/emily/.ros/test_results/cvg_sim_gazebo_plugins; then echo WARNING:\ failed\ to\ remove\ test-results\ directory ; fi
-=======
-	if ! rm -rf /home/dmillard/.ros/test_results/cvg_sim_gazebo_plugins; then echo WARNING:\ failed\ to\ remove\ test-results\ directory ; fi
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 clean-test-results: CMakeFiles/clean-test-results
 clean-test-results: CMakeFiles/clean-test-results.dir/build.make
@@ -69,10 +58,6 @@ CMakeFiles/clean-test-results.dir/clean:
 .PHONY : CMakeFiles/clean-test-results.dir/clean
 
 CMakeFiles/clean-test-results.dir/depend:
-<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles/clean-test-results.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles/clean-test-results.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : CMakeFiles/clean-test-results.dir/depend
 

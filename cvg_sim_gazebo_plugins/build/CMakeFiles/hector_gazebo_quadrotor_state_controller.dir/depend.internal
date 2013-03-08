@@ -3,17 +3,10 @@
 
 CMakeFiles/hector_gazebo_quadrotor_state_controller.dir/src/quadrotor_state_controller.o
  ../include/hector_quadrotor_controller/quadrotor_state_controller.h
-<<<<<<< HEAD
  /home/emily/fuerte_workspace/sandbox/ardrone_autonomy/msg_gen/cpp/include/ardrone_autonomy/Navdata.h
  /home/emily/fuerte_workspace/sandbox/ardrone_autonomy/srv_gen/cpp/include/ardrone_autonomy/CamSelect.h
  /home/emily/fuerte_workspace/sandbox/ardrone_autonomy/srv_gen/cpp/include/ardrone_autonomy/LedAnim.h
  /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/quadrotor_state_controller.cpp
-=======
- /home/dmillard/fuerte_workspace/sandbox/ardrone_autonomy/msg_gen/cpp/include/ardrone_autonomy/Navdata.h
- /home/dmillard/fuerte_workspace/sandbox/ardrone_autonomy/srv_gen/cpp/include/ardrone_autonomy/CamSelect.h
- /home/dmillard/fuerte_workspace/sandbox/ardrone_autonomy/srv_gen/cpp/include/ardrone_autonomy/LedAnim.h
- /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/quadrotor_state_controller.cpp
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
  /opt/ros/fuerte/include/XmlRpcDecl.h
  /opt/ros/fuerte/include/XmlRpcValue.h
  /opt/ros/fuerte/include/geometry_msgs/Point.h

@@ -32,17 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
-=======
-CMAKE_SOURCE_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 # Utility rule file for rospack_genmsg_libexe.
 
@@ -64,10 +57,6 @@ CMakeFiles/rospack_genmsg_libexe.dir/clean:
 .PHONY : CMakeFiles/rospack_genmsg_libexe.dir/clean
 
 CMakeFiles/rospack_genmsg_libexe.dir/depend:
-<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles/rospack_genmsg_libexe.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles/rospack_genmsg_libexe.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : CMakeFiles/rospack_genmsg_libexe.dir/depend
 

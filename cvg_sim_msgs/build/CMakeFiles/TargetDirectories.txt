@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/ROSBUILD_genmsg_py.dir
@@ -16,22 +15,3 @@
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/test-results.dir
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/test-results-run.dir
 /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/tests.dir
-=======
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/ROSBUILD_genmsg_py.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/ROSBUILD_gensrv_lisp.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/clean-test-results.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/rosbuild_precompile.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/rosbuild_premsgsrvgen.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/rospack_genmsg.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/rospack_genmsg_all.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/rospack_genmsg_libexe.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/rospack_gensrv.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/test.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/test-future.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/test-results.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/test-results-run.dir
-/home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_msgs/build/CMakeFiles/tests.dir
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6

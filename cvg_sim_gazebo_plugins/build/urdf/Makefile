@@ -36,17 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
-=======
-CMAKE_SOURCE_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -73,24 +66,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/urdf/CMakeFiles/progress.marks
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(MAKE) -f CMakeFiles/Makefile2 urdf/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles 0
-=======
-	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/urdf/CMakeFiles/progress.marks
-	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(MAKE) -f CMakeFiles/Makefile2 urdf/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles 0
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : all
 
 # The main clean target
 clean:
-<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(MAKE) -f CMakeFiles/Makefile2 urdf/clean
-=======
-	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(MAKE) -f CMakeFiles/Makefile2 urdf/clean
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : clean
 
 # The main clean target
@@ -99,29 +82,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(MAKE) -f CMakeFiles/Makefile2 urdf/preinstall
-=======
-	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(MAKE) -f CMakeFiles/Makefile2 urdf/preinstall
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(MAKE) -f CMakeFiles/Makefile2 urdf/preinstall
-=======
-	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(MAKE) -f CMakeFiles/Makefile2 urdf/preinstall
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
-=======
-	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : depend
 
 # Help Target
@@ -143,10 +114,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-<<<<<<< HEAD
 	cd /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
-=======
-	cd /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : cmake_check_build_system
 

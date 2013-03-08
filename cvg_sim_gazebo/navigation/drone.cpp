@@ -9,7 +9,7 @@
  * and has initial grid position (x,y).
  */
 drone::drone(string n, int x, int y) {
-    name = n; 
+    id = n; 
     grid_pos[0] = x; 
     grid_pos[1] = y;
 
@@ -18,22 +18,6 @@ drone::drone(string n, int x, int y) {
     
     //we can query absolute position
     //from Gazebo if needed 
-}
-
-/*
- * Advertise to appropriate topics.
- */
-void drone::advertise(void) {
-    ros::NodeHandle n;
-    string takeoff_topic = name + "/ardrone/takeoff"; 
-    string reset_topic = name + "/ardrone/reset"; 
-    string land_topic = name + "/ardrone/land"; 
-    string cmd_vel_topic = name + "/cmd_vel"; 
-
-    ros::Publisher takeoff_pub = n.advertise<std_msgs::Empty>(takeoff_topic, 1);
-    ros::Publisher reset_pub = n.advertise<std_msgs::Empty>(reset_topic, 1);
-    ros::Publisher land_pub = n.advertise<std_msgs::Empty>(land_topic, 1);
-    ros::Publisher cmd_vel_pub = n.advertise<geometry_msgs::Twist>(cmd_vel_topic, 1);
 }
 
 /*

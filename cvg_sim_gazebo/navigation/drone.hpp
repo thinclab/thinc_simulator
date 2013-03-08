@@ -14,7 +14,7 @@ class drone {
         void advertise(void);
         void move_on_grid(int, int);
         void move_absolute(double, double, double);
-        string name; 
+        int id; 
  
     private: 
         int grid_pos[2]; 

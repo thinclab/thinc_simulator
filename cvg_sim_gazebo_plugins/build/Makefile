@@ -36,17 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
-=======
-CMAKE_SOURCE_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -73,15 +66,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles 0
-=======
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/build/CMakeFiles 0
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 .PHONY : all
 
 # The main clean target
@@ -200,22 +187,6 @@ diffdrive_plugin_6w/fast:
 .PHONY : diffdrive_plugin_6w/fast
 
 #=============================================================================
-<<<<<<< HEAD
-# Target rules for targets named grid_floor
-
-# Build rule for target.
-grid_floor: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 grid_floor
-.PHONY : grid_floor
-
-# fast build rule for target.
-grid_floor/fast:
-	$(MAKE) -f CMakeFiles/grid_floor.dir/build.make CMakeFiles/grid_floor.dir/build
-.PHONY : grid_floor/fast
-
-#=============================================================================
-=======
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 # Target rules for targets named hector_gazebo_quadrotor_simple_controller
 
 # Build rule for target.
@@ -566,24 +537,6 @@ src/gazebo_ros_sonar.s:
 .PHONY : src/gazebo_ros_sonar.s
 
 # target to build an object file
-<<<<<<< HEAD
-src/grid_floor.o:
-	$(MAKE) -f CMakeFiles/grid_floor.dir/build.make CMakeFiles/grid_floor.dir/src/grid_floor.o
-.PHONY : src/grid_floor.o
-
-# target to preprocess a source file
-src/grid_floor.i:
-	$(MAKE) -f CMakeFiles/grid_floor.dir/build.make CMakeFiles/grid_floor.dir/src/grid_floor.i
-.PHONY : src/grid_floor.i
-
-# target to generate assembly for a file
-src/grid_floor.s:
-	$(MAKE) -f CMakeFiles/grid_floor.dir/build.make CMakeFiles/grid_floor.dir/src/grid_floor.s
-.PHONY : src/grid_floor.s
-
-# target to build an object file
-=======
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 src/quadrotor_simple_controller.o:
 	$(MAKE) -f CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/build.make CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/src/quadrotor_simple_controller.o
 .PHONY : src/quadrotor_simple_controller.o
@@ -657,10 +610,6 @@ help:
 	@echo "... clean-test-results"
 	@echo "... diffdrive_plugin_6w"
 	@echo "... edit_cache"
-<<<<<<< HEAD
-	@echo "... grid_floor"
-=======
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 	@echo "... hector_gazebo_quadrotor_simple_controller"
 	@echo "... hector_gazebo_quadrotor_state_controller"
 	@echo "... hector_gazebo_ros_baro"
@@ -700,12 +649,6 @@ help:
 	@echo "... src/gazebo_ros_sonar.o"
 	@echo "... src/gazebo_ros_sonar.i"
 	@echo "... src/gazebo_ros_sonar.s"
-<<<<<<< HEAD
-	@echo "... src/grid_floor.o"
-	@echo "... src/grid_floor.i"
-	@echo "... src/grid_floor.s"
-=======
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
 	@echo "... src/quadrotor_simple_controller.o"
 	@echo "... src/quadrotor_simple_controller.i"
 	@echo "... src/quadrotor_simple_controller.s"

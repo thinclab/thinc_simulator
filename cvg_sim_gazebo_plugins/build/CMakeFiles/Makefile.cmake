@@ -67,10 +67,6 @@ SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/ROSBUILD_gensrv_py.dir/DependInfo.cmake"
   "CMakeFiles/clean-test-results.dir/DependInfo.cmake"
   "CMakeFiles/diffdrive_plugin_6w.dir/DependInfo.cmake"
-<<<<<<< HEAD
-  "CMakeFiles/grid_floor.dir/DependInfo.cmake"
-=======
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
   "CMakeFiles/hector_gazebo_quadrotor_simple_controller.dir/DependInfo.cmake"
   "CMakeFiles/hector_gazebo_quadrotor_state_controller.dir/DependInfo.cmake"
   "CMakeFiles/hector_gazebo_ros_baro.dir/DependInfo.cmake"

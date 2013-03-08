@@ -3,11 +3,7 @@
 
 CMakeFiles/reset_plugin.dir/src/reset_plugin.o
  ../include/hector_gazebo_plugins/reset_plugin.h
-<<<<<<< HEAD
  /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/reset_plugin.cpp
-=======
- /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/reset_plugin.cpp
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
  /opt/ros/fuerte/include/XmlRpcDecl.h
  /opt/ros/fuerte/include/XmlRpcValue.h
  /opt/ros/fuerte/include/ros/advertise_options.h

@@ -5,11 +5,7 @@ CMakeFiles/hector_gazebo_ros_imu.dir/src/gazebo_ros_imu.o
  ../include/hector_gazebo_plugins/gazebo_ros_imu.h
  ../include/hector_gazebo_plugins/sensor_model.h
  ../srv_gen/cpp/include/cvg_sim_gazebo_plugins/SetBias.h
-<<<<<<< HEAD
  /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/gazebo_ros_imu.cpp
-=======
- /home/dmillard/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/gazebo_ros_imu.cpp
->>>>>>> 9e0df80066a8de231801aa59886e14f01ad56fe6
  /opt/ros/fuerte/include/XmlRpcDecl.h
  /opt/ros/fuerte/include/XmlRpcValue.h
  /opt/ros/fuerte/include/geometry_msgs/Point.h
