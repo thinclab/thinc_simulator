@@ -90,7 +90,8 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    imwrite("../Media/models/grid/material_1.png", grid_image);
+    imwrite("../Media/models/material_1.png", grid_image);
+    imshow("material", grid_image);
     waitKey(0);                                                                                                   
 
     double origin_x = (-1)*columns/2; 

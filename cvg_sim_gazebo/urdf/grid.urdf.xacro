@@ -12,13 +12,21 @@
     <visual>
       <origin xyz="0 0 0"/>
       <geometry>
+<<<<<<< HEAD
         <box size="7 7 0.1" />
+=======
+        <box size="10 10 0.1" />
+>>>>>>> 42e1c5f18624341c5fe76a0249fd28ddf659a271
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0"/>
       <geometry>
+<<<<<<< HEAD
         <box size="7 7 0.1" />
+=======
+        <box size="10 10 0.1" />
+>>>>>>> 42e1c5f18624341c5fe76a0249fd28ddf659a271
       </geometry>
     </collision>
   </link>

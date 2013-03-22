@@ -181,7 +181,7 @@ dae_string = '''
     </library_effects>
     <library_images>
         <image id="ID13">
-            <init_from>grid/material_1.png</init_from>
+            <init_from>/material_1.png</init_from>
         </image>
     </library_images>
     <scene>
