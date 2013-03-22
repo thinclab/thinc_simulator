@@ -19,9 +19,9 @@ using namespace cv;
 
 int main(int argc, char* argv[]) {
 
-    ros::init(argc, argv, "grid_cells");
-    ros::NodeHandle n; 
-    ros::Rate loop_rate(10); 
+    //ros::init(argc, argv, "grid_cells");
+   // ros::NodeHandle n; 
+   // ros::Rate loop_rate(10); 
 
     if (argc != 5) {
         cout << "You must enter 4 additional arguments.";
@@ -89,7 +89,8 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    imwrite("../Media/models/grid/material_1.png", grid_image);
+    imwrite("../Media/models/material_1.png", grid_image);
+    imshow("material", grid_image);
     waitKey(0);                                                                                                   
     //begin urdf output
     output += "<?xml version=\"1.0\"?>\n\n\n<robot name=\"grid\">\n\n";

@@ -4,7 +4,7 @@
 CMakeFiles/hector_gazebo_ros_magnetic.dir/src/gazebo_ros_magnetic.o
  ../include/hector_gazebo_plugins/gazebo_ros_magnetic.h
  ../include/hector_gazebo_plugins/sensor_model.h
- /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/gazebo_ros_magnetic.cpp
+ /home/apoole/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/gazebo_ros_magnetic.cpp
  /opt/ros/fuerte/include/XmlRpcDecl.h
  /opt/ros/fuerte/include/XmlRpcValue.h
  /opt/ros/fuerte/include/geometry_msgs/Vector3.h

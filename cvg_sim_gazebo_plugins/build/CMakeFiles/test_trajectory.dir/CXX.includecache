@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/test_trajectory.cpp
+/home/apoole/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/src/test_trajectory.cpp
 ros/ros.h
 -
 geometry_msgs/Twist.h

@@ -1,4 +1,4 @@
-# Install script for directory: /home/emily/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/urdf
+# Install script for directory: /home/apoole/fuerte_workspace/sandbox/tum_simulator/cvg_sim_gazebo_plugins/urdf
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
