@@ -19,9 +19,9 @@ using namespace cv;
 
 int main(int argc, char* argv[]) {
 
-    ros::init(argc, argv, "grid_cells");
-    ros::NodeHandle n; 
-    ros::Rate loop_rate(10); 
+//    ros::init(argc, argv, "grid_cells");
+//    ros::NodeHandle n; 
+//    ros::Rate loop_rate(10); 
 
     if (argc != 5) {
         cout << "You must enter 4 additional arguments.";
@@ -30,6 +30,7 @@ int main(int argc, char* argv[]) {
 
     //save the arguments
     string output = "";
+    string world_output = ""; 
     string c = argv[1];
     string r = argv[2];
     string width = argv[3];
@@ -91,6 +92,11 @@ int main(int argc, char* argv[]) {
 
     imwrite("../Media/models/grid/material_1.png", grid_image);
     waitKey(0);                                                                                                   
+
+    double origin_x = (-1)*columns/2; 
+    double origin_y = (-1)*rows/2; 
+
+    string spawn_x = origin_x.str(); 
     //begin urdf output
     output += "<?xml version=\"1.0\"?>\n\n\n<robot name=\"grid\">\n\n";
     output += "  <link name=\"base_link\">\n";
@@ -133,6 +139,75 @@ int main(int argc, char* argv[]) {
     if (ofs.is_open())
         ofs << output;
     ofs.close();
+
+    
+
+    //begin generation of world file
+    world_output += "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+    world_output += "<gazebo version=\"1.0\">\n"; 
+    world_output += "  <world name=\"default\">\n";
+    world_output += "    <scene>\n"; 
+    world_output += "      <ambient rgba=\"0.5 0.5 0.5 1\"/>\n";
+    world_output += "      <background rgba=\"0.5 0.5 0.5 1\"/>\n";
+    world_output += "      <shadows enabled=\"false\"/>\n";
+    world_output += "    </scene>\n"; 
+    world_output += "    <physics type=\"ode\" update_rate=\"1000\">\n";
+    world_output += "      <gravity xyz=\"0 0 -9.81\"/>\n"; 
+    world_output += "      <ode>\n"; 
+    world_output += "        <solver type=\"quick\" dt=\"0.001\" iters=\"10\" sor=\"1.3\"/>\n";
+    world_output += "        <constraints cfm=\"0.0\" erp=\"0.2\" contact_max_correcting_vel=\"10\" contact_surface_layer=\"0.001\"/>\n"; 
+    world_output += "      </ode>\n"; 
+    world_output += "    </physics>\n"; 
+    world_output += "    <light type=\"directional\" name=\"directional_light_1\" cast_shadows=\"false\">\n"; 
+    world_output += "      <origin pose=\"0 0 20 0 0 0\"/>\n"; 
+    world_output += "      <diffuse rgba=\"1 1 1 1\"/>\n"; 
+    world_output += "      <specular rgba=\"1 1 1 1\"/>\n"; 
+    world_output += "      <attenuation range=\"300\"/>\n"; 
+    world_output += "      <direction xyz=\"1 1 -1\"/>\n";
+    world_output += "    </light>\n";
+    world_output += "    <light type=\"directional\" name=\"directional_light_2\" cast_shadows=\"false\">\n"; 
+    world_output += "      <origin pose=\"0 0 20 0 0 0\"/>\n"; 
+    world_output += "      <diffuse rgba=\"1 1 1 1\"/>\n"; 
+    world_output += "      <specular rgba=\"1 1 1 1\"/>\n"; 
+    world_output += "      <attenuation range=\"300\"/>\n"; 
+    world_output += "      <direction xyz=\"-1 1 -1\"/>\n"; 
+    world_output += "    </light>\n"; 
+    world_output += "    <light type=\"directional\" name=\"directional_light_3\" cast_shadows=\"false\">\n"; 
+    world_output += "      <origin pose=\"0 0 20 0 0 0\"/>\n"; 
+    world_output += "      <diffuse rgba=\"1 1 1 1\"/>\n"; 
+    world_output += "      <specular rgba=\"1 1 1 1\"/>\n"; 
+    world_output += "      <attenuation range=\"300\"/>\n"; 
+    world_output += "      <direction xyz=\"-1 -1 -1\"/>\n"; 
+    world_output += "    </light>\n"; 
+    world_output += "    <model name=\"grid\" static=\"true\">\n"; 
+    world_output += "      <link name=\"grid_link\">\n"; 
+    world_output += "        <origin pose=\"" + origin_x + " " + origin_y + " 0 0 0 0\"/>\n"; 
+    world_output += "        <collision name=\"grid_collision\">\n"; 
+    world_output += "<!--                 <geometry>\n"; 
+    world_output += "                     <mesh filename=\"grid.dae\" scale=\"1 1 1\"/>\n"; 
+    world_output += "             </geometry> -->\n"; 
+    world_output += "        <geometry>\n"; 
+    world_output += "          <plane normal=\"0 0 1\"/>\n"; 
+    world_output += "        </geometry>\n"; 
+    world_output += "        <surface>\n"; 
+    world_output += "          <friction>\n"; 
+    world_output += "            <ode mu=\"10.0\" mu2=\"10.0\" fdir1=\"0 0 0\" slip1=\"0\" slip2=\"0\"/>\n"; 
+    world_output += "          </friction>\n"; 
+    world_output += "          <bounce restitution_coefficient=\"0\" threshold=\"1000000.0\"/>\n"; 
+    world_output += "          <contact>\n"; 
+    world_output += "            <ode soft_cfm=\"0\" soft_erp=\"0.2\" kp=\"1e10\" kd=\"1\" max_vel=\"100.0\" min_depth=\"0.0001\"/>\n"; 
+    world_output += "          </contact>\n"; 
+    world_output += "        </surface>\n"; 
+    world_output += "      </collision>\n"; 
+    world_output += "      <visual name=\"grid\" cast_shadows=\"false\">\n"; 
+    world_output += "        <geometry>\n"; 
+    world_output += "          <mesh filename=\"grid.dae\" scale=\"1 1 1\"/>\n"; 
+    world_output += "        </geometry>\n"; 
+    world_output += "      </visual>\n"; 
+    world_output += "    </link>\n"; 
+    world_output += "  </model>\n"; 
+    world_output += "</world>\n"; 
+    world_output += "</gazebo>\n"; 
 
 
 }                         
