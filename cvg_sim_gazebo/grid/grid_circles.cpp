@@ -52,7 +52,7 @@ int main(int argc, char* argv[]) {
 
     //create matrix and window
     Mat grid_image = Mat::zeros(x_pixels, y_pixels, CV_8UC3);
-    char grid_window[] = "Grid";
+//    char grid_window[] = "Grid";
 
     //create squares
     bool color = true; //to alternate colors
@@ -91,13 +91,17 @@ int main(int argc, char* argv[]) {
     }
 
     imwrite("../Media/models/material_1.png", grid_image);
-    imshow("material", grid_image);
+//    imshow("material", grid_image);
     waitKey(0);                                                                                                   
 
     double origin_x = (-1)*columns/2; 
     double origin_y = (-1)*rows/2; 
 
-    string spawn_x = origin_x.str(); 
+    string spawn_x, spawn_y; 
+    stringstream t1, t2; 
+    t1 << origin_x; t2 << origin_y; 
+    spawn_x = t1.str(); spawn_y = t2.str(); 
+
     //begin urdf output
     output += "<?xml version=\"1.0\"?>\n\n\n<robot name=\"grid\">\n\n";
     output += "  <link name=\"base_link\">\n";
@@ -182,7 +186,7 @@ int main(int argc, char* argv[]) {
     world_output += "    </light>\n"; 
     world_output += "    <model name=\"grid\" static=\"true\">\n"; 
     world_output += "      <link name=\"grid_link\">\n"; 
-    world_output += "        <origin pose=\"" + origin_x + " " + origin_y + " 0 0 0 0\"/>\n"; 
+    world_output += "        <origin pose=\"" + spawn_x + " " + spawn_y + " 0 0 0 0\"/>\n"; 
     world_output += "        <collision name=\"grid_collision\">\n"; 
     world_output += "<!--                 <geometry>\n"; 
     world_output += "                     <mesh filename=\"grid.dae\" scale=\"1 1 1\"/>\n"; 
@@ -209,6 +213,14 @@ int main(int argc, char* argv[]) {
     world_output += "  </model>\n"; 
     world_output += "</world>\n"; 
     world_output += "</gazebo>\n"; 
+
+    //write to file
+    ofstream ofs2;
+    ofs2.open("../worlds/grid2.world", ios::trunc);
+    if (ofs2.is_open())
+        ofs2 << world_output;
+    ofs2.close();
+
 
 
 }                         
