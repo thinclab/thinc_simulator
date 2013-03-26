@@ -12,8 +12,6 @@
 //ros
 #include "ros/ros.h"
 
-#define w 400
-
 using namespace std;
 using namespace cv;
 
@@ -33,26 +31,24 @@ int main(int argc, char* argv[]) {
     string world_output = ""; 
     string c = argv[1];
     string r = argv[2];
-    string width = argv[3];
-    string height = argv[4];
+    string x = argv[3]; 
+    string y = argv[4]; 
 
     //convert arguments to ints
-    int columns, rows, cell_width, cell_height;
+    int columns, rows;
+    double x_scale, y_scale; 
     stringstream s1(c); stringstream s2(r);
-    stringstream s3(width); stringstream s4(height);
+    stringstream x1(x); stringstream y1(y); 
     s1 >> columns; s2 >> rows;
-    s3 >> cell_width; s4 >> cell_height;
+    x1 >> x_scale; y1 >> y_scale; 
 
     //determine size of the image
-    int pixels_per_meter = 100;
-    cell_width *= pixels_per_meter;
-    cell_height *= pixels_per_meter;
-    int x_pixels = cell_width*rows;
-    int y_pixels = cell_height*columns;
+    int pixel_scale = 500; 
+    int x_pixels = pixel_scale*rows;
+    int y_pixels = pixel_scale*columns;
 
     //create matrix and window
     Mat grid_image = Mat::zeros(x_pixels, y_pixels, CV_8UC3);
-//    char grid_window[] = "Grid";
 
     //create squares
     bool color = true; //to alternate colors
@@ -72,30 +68,29 @@ int main(int argc, char* argv[]) {
             }
 
             if (color) {
-                rectangle(grid_image, Point(i*cell_width, j*cell_height),
-                    Point((i+1)*cell_width, (j+1)*cell_height),
+                rectangle(grid_image, Point(i*pixel_scale, j*pixel_scale),
+                    Point((i+1)*pixel_scale, (j+1)*pixel_scale),
                     Scalar(102, 0, 255), -1, 8);//pink
                 color = false;
 
             }
             else {
-                rectangle(grid_image, Point(i*cell_width, j*cell_height),
-                    Point((i+1)*cell_width, (j+1)*cell_height),
+                rectangle(grid_image, Point(i*pixel_scale, j*pixel_scale),
+                    Point((i+1)*pixel_scale, (j+1)*pixel_scale),
                     Scalar(51, 204, 0), -1, 8);//green
                 color = true;
             }
-            circle(grid_image, Point(cell_width*(i+.5), cell_height*(j+.5)),
-	        (cell_width/8), Scalar(255, 255, 255), 
-		cell_width/4, 8, 0); //white
+            circle(grid_image, Point(pixel_scale*(i+.5), pixel_scale*(j+.5)),
+	        (pixel_scale/8), Scalar(255, 255, 255), 
+		pixel_scale/4, 8, 0); //white
         }
     }
 
     imwrite("../Media/models/material_1.png", grid_image);
-//    imshow("material", grid_image);
     waitKey(0);                                                                                                   
 
-    double origin_x = (-1)*columns/2; 
-    double origin_y = (-1)*rows/2; 
+    double origin_x = (-1)*columns*y_scale/2; 
+    double origin_y = (-1)*rows*x_scale/2; 
 
     string spawn_x, spawn_y; 
     stringstream t1, t2; 
@@ -107,9 +102,9 @@ int main(int argc, char* argv[]) {
     output += "  <link name=\"base_link\">\n";
 
     //convert grid size to strings 
-    stringstream s5, s6; string x_size, y_size;
-    s5 << x_pixels; s6 << y_pixels;
-    x_size = s5.str(); y_size = s6.str();
+    stringstream s3, s4; string x_size, y_size;
+    s3 << x_pixels; s4 << y_pixels;
+    x_size = s3.str(); y_size = s4.str();
 
     //write link name and info 
     output += "    <inertial>\n";

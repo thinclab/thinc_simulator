@@ -36,7 +36,7 @@
     </light>
     <model name="grid" static="true">
       <link name="grid_link">
-        <origin pose="-5 -5 0 0 0 0"/>
+        <origin pose="-8 -4 0 0 0 0"/>
         <collision name="grid_collision">
 <!--                 <geometry>
                      <mesh filename="grid.dae" scale="1 1 1"/>
