@@ -49,6 +49,9 @@ int main(int argc, char* argv[]) {
     //create squares
     bool color = true; //to alternate colors
     bool first_color = true; //to alternate starting color of rows
+ 
+    //size of circle
+    int radius = 30;
 
     for (int i = 0; i < columns; i++) {
         for (int j = 0; j < rows; j++) {
@@ -77,8 +80,8 @@ int main(int argc, char* argv[]) {
                 color = true;
             }
             circle(grid_image, Point(pixel_scale*(i+.5), pixel_scale*(j+.5)),
-	        (10), Scalar(255, 255, 255), 
-		20, 8, 0); //white
+	        (radius/2), Scalar(255, 255, 255), 
+		radius, 8, 0); //white
         }
     }
 
