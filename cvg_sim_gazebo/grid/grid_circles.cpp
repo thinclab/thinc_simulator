@@ -88,8 +88,8 @@ int main(int argc, char* argv[]) {
     imwrite("../Media/models/material_1.png", grid_image);
     waitKey(0);                                                       
 
-    double origin_x = (-1)*columns*y_scale/2; 
-    double origin_y = (-1)*rows*x_scale/2; 
+    double origin_x = (-1)*(double)columns*y_scale/2; 
+    double origin_y = (-1)*(double)rows*x_scale/2; 
 
     string spawn_x, spawn_y; 
     stringstream t1, t2; 
