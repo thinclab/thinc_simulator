@@ -17,10 +17,6 @@ using namespace cv;
 
 int main(int argc, char* argv[]) {
 
-//    ros::init(argc, argv, "grid_cells");
-//    ros::NodeHandle n; 
-//    ros::Rate loop_rate(10); 
-
     if (argc != 5) {
         cout << "You must enter 4 additional arguments.";
         exit(1);
@@ -81,13 +77,13 @@ int main(int argc, char* argv[]) {
                 color = true;
             }
             circle(grid_image, Point(pixel_scale*(i+.5), pixel_scale*(j+.5)),
-	        (pixel_scale/8), Scalar(255, 255, 255), 
-		pixel_scale/4, 8, 0); //white
+	        (pixel_scale/20), Scalar(255, 255, 255), 
+		pixel_scale/20, 8, 0); //white
         }
     }
 
     imwrite("../Media/models/material_1.png", grid_image);
-    waitKey(0);                                                                                                   
+    waitKey(0);                                                       
 
     double origin_x = (-1)*columns*y_scale/2; 
     double origin_y = (-1)*rows*x_scale/2; 
@@ -96,51 +92,6 @@ int main(int argc, char* argv[]) {
     stringstream t1, t2; 
     t1 << origin_x; t2 << origin_y; 
     spawn_x = t1.str(); spawn_y = t2.str(); 
-
-    //begin urdf output
-    output += "<?xml version=\"1.0\"?>\n\n\n<robot name=\"grid\">\n\n";
-    output += "  <link name=\"base_link\">\n";
-
-    //convert grid size to strings 
-    stringstream s3, s4; string x_size, y_size;
-    s3 << x_pixels; s4 << y_pixels;
-    x_size = s3.str(); y_size = s4.str();
-
-    //write link name and info 
-    output += "    <inertial>\n";
-    output += "      <origin xyz=\"0 0 0\"/>\n";
-    output += "      <mass value=\"1.0\" />\n";
-    output += "      <inertia  ixx=\"0.0\" ixy=\"0.0\"  ixz=\"0.0\"  iyy=\"0.0\"  iyz=\"0.0\"  izz=\"0.0\" />\n";
-    output += "    </inertial>\n";
-    output += "    <visual>\n";
-    output += "      <origin xyz=\"0 0 0\"/>\n";
-    output += "      <geometry>\n";
-    output += "        <box size=\"" + c + " " + r + " 0.1\" />\n";
-    output += "      </geometry>\n";
-    output += "    </visual>\n";
-    output += "    <collision>\n";
-    output += "      <origin xyz=\"0 0 0\"/>\n";
-    output += "      <geometry>\n";
-    output += "        <box size=\"" + c + " " + r + " 0.1\" />\n";
-    output += "      </geometry>\n";
-    output += "    </collision>\n";
-    output += "  </link>\n\n";
-    output += "  <gazebo reference=\"base_link\">\n";
-    output += "    <material name=\"grid\">\n";
-    output += "      <texture filename=\"file://grid.png\"/>\n";
-    output += "    </material>\n";
-    output += "    <static>true</static>\n";
-    output += "  </gazebo>\n\n";
-    output += "</robot>";
-
-    //write to file
-    ofstream ofs;
-    ofs.open("../urdf/grid.urdf.xacro", ios::trunc);
-    if (ofs.is_open())
-        ofs << output;
-    ofs.close();
-
-    
 
     //begin generation of world file
     world_output += "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
@@ -210,11 +161,11 @@ int main(int argc, char* argv[]) {
     world_output += "</gazebo>\n"; 
 
     //write to file
-    ofstream ofs2;
-    ofs2.open("../worlds/grid2.world", ios::trunc);
-    if (ofs2.is_open())
-        ofs2 << world_output;
-    ofs2.close();
+    ofstream ofs;
+    ofs.open("../worlds/grid.world", ios::trunc);
+    if (ofs.is_open())
+        ofs << world_output;
+    ofs.close();
 
 
 
