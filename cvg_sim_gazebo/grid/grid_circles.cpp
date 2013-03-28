@@ -77,8 +77,8 @@ int main(int argc, char* argv[]) {
                 color = true;
             }
             circle(grid_image, Point(pixel_scale*(i+.5), pixel_scale*(j+.5)),
-	        (pixel_scale/20), Scalar(255, 255, 255), 
-		pixel_scale/20, 8, 0); //white
+	        (10), Scalar(255, 255, 255), 
+		20, 8, 0); //white
         }
     }
 
