@@ -228,10 +228,13 @@ void GazeboQuadrotorSimpleController::VelocityCallback(const geometry_msgs::Twis
   // generate noise
   if(time_counter_for_drift_noise > motion_drift_noise_time_)
   {
+    std::cout << "drift set" << std::endl;
     drift_noise[0] = 2*motion_drift_noise_*(drand48()-0.5);
     drift_noise[1] = 2*motion_drift_noise_*(drand48()-0.5);
-    drift_noise[2] = 2*motion_drift_noise_*(drand48()-0.5);
-    drift_noise[3] = 2*motion_drift_noise_*(drand48()-0.5);
+    //drift_noise[2] = 2*motion_drift_noise_*(drand48()-0.5);
+    drift_noise[2] = 0;
+    //drift_noise[3] = 0.1*motion_drift_noise_*(drand48()-0.5);
+    drift_noise[3] = 0;
     time_counter_for_drift_noise = 0.0;
   }
   time_counter_for_drift_noise += dt;

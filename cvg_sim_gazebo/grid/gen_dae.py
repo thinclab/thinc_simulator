@@ -189,7 +189,7 @@ dae_string = '''
         <instance_visual_scene url="#ID1" />
     </scene>
 </COLLADA>
-'''.format(h=string.atoi(sys.argv[1])*string.atoi(sys.argv[3]), w=string.atoi(sys.argv[2])*string.atoi(sys.argv[4]))
+'''.format(h=string.atof(sys.argv[1])*string.atof(sys.argv[3]), w=string.atof(sys.argv[2])*string.atof(sys.argv[4]))
 
 dae_file = open("../Media/models/grid.dae", "w")
 dae_file.write(dae_string)
