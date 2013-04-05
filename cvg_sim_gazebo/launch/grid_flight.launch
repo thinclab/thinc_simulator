@@ -11,7 +11,7 @@
     <include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
       <arg name="model" value="$(find cvg_sim_gazebo)/urdf/quadrotor_sensors0.urdf"/>
       <arg name="modelname" value="drone0"/>
-      <arg name="spawncoords" value="-x -4.5 -y -.5 -z 0.75"/>
+      <arg name="spawncoords" value="-x -9.0 -y -1.0 -z 0.75"/>
     </include>
   </group>
 
@@ -20,7 +20,7 @@
     <include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
       <arg name="model" value="$(find cvg_sim_gazebo)/urdf/quadrotor_sensors1.urdf"/>
       <arg name="modelname" value="drone1"/>
-      <arg name="spawncoords" value="-x -1.5 -y -2.5 -z 0.75"/>
+      <arg name="spawncoords" value="-x -3.0 -y -5.0 -z 0.75"/>
     </include>
   </group>
 
