@@ -36,4 +36,4 @@ To add another drone, copy the spawn_quadrotor sublaunch in the
 `grid\_flight.launch` file and modify accordingly.  You will also need to copy
 the requisite files in `urdf/`.  Use a commandline tool like `sed` (use the
 `-i` option) to modify those files.  Again, I wish there was a more flexible
-way, but this is what we have.
+way, but this is what we have currently.
