@@ -2,7 +2,7 @@
 \mainpage
 \htmlinclude manifest.html
 
-\b cvg_sim_gazebo 
+\b thinc_sim_gazebo 
 
 <!-- 
 Provide an overview of your package.
