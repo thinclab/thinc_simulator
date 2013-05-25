@@ -1,14 +1,12 @@
 <package>
-  <description brief="cvg_sim_gazebo">
-
-     cvg_sim_gazebo contains different models for gazebo simulator.
-     Such as: quadrocopter model, room model, landscale model, marker model.
-
+  <description brief="thinc_sim_gazebo">
+    thinc_sim_gazebo contains models for ARDrone Parrot quadrotors, as well as
+    tools for dynamic grid world generation
   </description>
-  <author>Hongrong Huang</author>
+  <author>David Millard</author>
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/cvg_sim_gazebo</url>
+  <url>http://ros.org/wiki/thinc_sim_gazebo</url>
   <depend package="gazebo"/>
   <depend package="opencv2"/>
 

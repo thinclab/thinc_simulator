@@ -1,7 +1,15 @@
 <?xml version="1.0"?>
 
 <launch>
-   
+  <node
+   name="gen_texture" pkg="thinc_sim_gazebo" type="gen_texture"
+   args="10 10 1 1 $(find thinc_sim_gazebo)/Media/models/grid.png $(find thinc_sim_gazebo)/worlds/grid.world"
+  />
+  <node
+   name="gen_dae" pkg="thinc_sim_gazebo" type="gen_dae.py"
+   args="10 10 1 1 $(find thinc_sim_gazebo)/Media/models/grid.dae"
+  />
+
   <!-- Start Gazebo with wg world running in (max) realtime -->
   <include file="$(find thinc_sim_gazebo)/launch/grid.launch"/>
 
@@ -23,5 +31,4 @@
       <arg name="spawncoords" value="-x -3.0 -y -5.0 -z 0.75"/>
     </include>
   </group>
-
 </launch>

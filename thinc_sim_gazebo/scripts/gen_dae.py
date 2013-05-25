@@ -1,3 +1,9 @@
+#!/usr/bin/env python 
+
+import roslib; roslib.load_manifest('thinc_sim_gazebo')
+import rospy
+rospy.init_node('gen_dae')
+
 import sys
 import string
 

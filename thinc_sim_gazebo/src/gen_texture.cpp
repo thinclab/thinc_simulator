@@ -1,4 +1,3 @@
-//C++
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -16,6 +15,8 @@ using namespace std;
 using namespace cv;
 
 int main(int argc, char ** argv) {
+    ros::init(argc, argv, "gen_texture");
+    ros::NodeHandle n;
 
     if (argc != 7) {
         cout << "usage: " << argv[0];
@@ -52,39 +53,36 @@ int main(int argc, char ** argv) {
         for (int j = 0; j < rows; j++) {
 
             //set the starting color for the row
-            if (j == 0 && first_color) {
-                color = false;
-                first_color = false;
-            }
-            else if (j == 0 && !first_color) {
-                color = true;
-                first_color = true;
-            }
+            if (j == 0 && first_color) { color = false; first_color = false; }
+            else if (j == 0 && !first_color) { color = true; first_color = true; }
 
             if (color) {
-                rectangle(grid_image, Point(i*pixel_scale, j*pixel_scale),
+                rectangle(
+                    grid_image, Point(i*pixel_scale, j*pixel_scale),
                     Point((i+1)*pixel_scale, (j+1)*pixel_scale),
-                    Scalar(102, 0, 255), -1, 8);//pink
+                    Scalar(102, 0, 255), -1, 8
+                );//pink
                 color = false;
-
-            }
-            else {
-                rectangle(grid_image, Point(i*pixel_scale, j*pixel_scale),
+            } else {
+                rectangle(
+                    grid_image, Point(i*pixel_scale, j*pixel_scale),
                     Point((i+1)*pixel_scale, (j+1)*pixel_scale),
-                    Scalar(51, 204, 0), -1, 8);//green
+                    Scalar(51, 204, 0), -1, 8
+                );//green
                 color = true;
             }
-            circle(grid_image, Point(pixel_scale*(i+.5), pixel_scale*(j+.5)),
-	        (radius/2), Scalar(255, 255, 255), 
-		radius, 8, 0); //white
+            circle(
+                grid_image, Point(pixel_scale*(i+.5), pixel_scale*(j+.5)),
+                (radius/2), Scalar(255, 255, 255), 
+                radius, 8, 0
+            ); //white
         }
     }
 
     imwrite(argv[5], grid_image);
-    waitKey(0);                                                       
 
-    double origin_x = (-1)*(double)columns*y_scale/2; 
-    double origin_y = (-1)*(double)rows*x_scale/2; 
+    double origin_x = (-1)*(double)columns*y_scale;
+    double origin_y = (-1)*(double)rows*x_scale;
 
     string spawn_x, spawn_y; 
     stringstream t1, t2; 
@@ -132,9 +130,6 @@ int main(int argc, char ** argv) {
     world_output += "      <link name=\"grid_link\">\n"; 
     world_output += "        <origin pose=\"" + spawn_x + " " + spawn_y + " 0 0 0 0\"/>\n"; 
     world_output += "        <collision name=\"grid_collision\">\n"; 
-    world_output += "<!--                 <geometry>\n"; 
-    world_output += "                     <mesh filename=\"grid.dae\" scale=\"1 1 1\"/>\n"; 
-    world_output += "             </geometry> -->\n"; 
     world_output += "        <geometry>\n"; 
     world_output += "          <plane normal=\"0 0 1\"/>\n"; 
     world_output += "        </geometry>\n"; 
@@ -164,4 +159,6 @@ int main(int argc, char ** argv) {
     if (ofs.is_open())
         ofs << world_output;
     ofs.close();
+
+    return 0;
 }
