@@ -7,7 +7,7 @@
   <author>David Millard</author>
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/cvg_sim_msgs</url>
+  <url>http://ros.org/wiki/thinc_sim_msgs</url>
   <depend package="geometry_msgs" />
   <export>
     <cpp cflags="-I${prefix}/include"/>
