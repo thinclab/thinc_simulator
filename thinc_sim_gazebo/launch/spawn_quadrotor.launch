@@ -1,21 +1,22 @@
 <?xml version="1.0"?>
 
-
- <launch>
-   <arg name="model" default="$(find cvg_sim_gazebo)/urdf/quadrotor.urdf.xacro"/>
+<launch>
+   <arg name="model" default="$(find thinc_sim_gazebo)/urdf/quadrotor.urdf.xacro"/>
    <arg name="modelname" default="quadrotor"/>
    <arg name="spawncoords" default="-x 0.0 -y 0.0 -z 0.5"/>
+
    <!-- send the robot XML to param server -->
-   <param name="robot_description" command="$(find xacro)/xacro.py '$(arg model)'" />
+   <param
+     name="robot_description"
+     command="$(find xacro)/xacro.py '$(arg model)'"
+   />
    
    <!-- push robot_description to factory and spawn robot in gazebo -->
    <node name="spawn_robot" pkg="gazebo" type="spawn_model"
-   args="-param robot_description
-   -urdf
-   $(arg spawncoords)
-   -model $(arg modelname)
-   -robot_namespace $(arg modelname)"
-     respawn="false" output="screen"/>
+         args="-param robot_description -urdf $(arg spawncoords)
+               -model $(arg modelname) -robot_namespace $(arg modelname)"
+         respawn="false" output="screen"
+   />
      
    <!-- start robot state publisher -->
    <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" output="screen" >
@@ -27,7 +28,4 @@
      <param name="odometry_topic" value="ground_truth/state" />
      <param name="frame_id" value="nav" />
    </node>
-   <!-- node name="hector_pose_estimation" pkg="hector_pose_estimation" type="hector_pose_estimation_node" output="screen"/-->
-
- </launch>
-   
+</launch>

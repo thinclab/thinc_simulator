@@ -182,7 +182,7 @@ dae_string = '''
     </library_effects>
     <library_images>
         <image id="ID13">
-            <init_from>/material_1.png</init_from>
+            <init_from>/grid.png</init_from>
         </image>
     </library_images>
     <scene>
@@ -191,6 +191,6 @@ dae_string = '''
 </COLLADA>
 '''.format(h=string.atof(sys.argv[1])*string.atof(sys.argv[3]), w=string.atof(sys.argv[2])*string.atof(sys.argv[4]))
 
-dae_file = open("../Media/models/grid.dae", "w")
+dae_file = open(sys.argv[5], "w")
 dae_file.write(dae_string)
 dae_file.close()

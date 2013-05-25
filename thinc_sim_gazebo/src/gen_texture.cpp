@@ -15,28 +15,23 @@
 using namespace std;
 using namespace cv;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char ** argv) {
 
-    if (argc != 5) {
-        cout << "You must enter 4 additional arguments.";
+    if (argc != 7) {
+        cout << "usage: " << argv[0];
+        cout << " <columns> <rows> <col-scale> <row-scale>";
+        cout << " <png-path> <world-path>" << endl;
         exit(1);
     }
 
     //save the arguments
     string output = "";
     string world_output = ""; 
-    string c = argv[1];
-    string r = argv[2];
-    string x = argv[3]; 
-    string y = argv[4]; 
 
-    //convert arguments to ints
-    int columns, rows;
-    double x_scale, y_scale; 
-    stringstream s1(c); stringstream s2(r);
-    stringstream x1(x); stringstream y1(y); 
-    s1 >> columns; s2 >> rows;
-    x1 >> x_scale; y1 >> y_scale; 
+    int columns = atoi(argv[1]);
+    int rows = atoi(argv[2]);
+    double x_scale = atof(argv[3]);
+    double y_scale = atof(argv[4]);
 
     //determine size of the image
     int pixel_scale = 500; 
@@ -85,7 +80,7 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    imwrite("../Media/models/material_1.png", grid_image);
+    imwrite(argv[5], grid_image);
     waitKey(0);                                                       
 
     double origin_x = (-1)*(double)columns*y_scale/2; 
@@ -165,11 +160,8 @@ int main(int argc, char* argv[]) {
 
     //write to file
     ofstream ofs;
-    ofs.open("../worlds/grid.world", ios::trunc);
+    ofs.open(argv[6], ios::trunc);
     if (ofs.is_open())
         ofs << world_output;
     ofs.close();
-
-
-
-}                         
+}
