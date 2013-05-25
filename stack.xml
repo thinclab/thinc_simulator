@@ -1,9 +1,14 @@
 <stack>
-  <description brief="cvg_simulator">Stack from CVG for simulating quadrocopters</description>
-  <author>Maintained by Hongrong Huang</author>
+  <description brief="thinc_simulator">
+    Stack from UGA THiNC Lab for simulating Parrot ARDrone Quadrotors (versions
+    1 and 2) in Gazebo.  Adapted from stack from TUM CVG for simulating
+    quadrocopters.  Includes models and launch files for ARDrone Quadrotors and
+    grid environments.  This code is specifically tailored to multi-robot
+    simulation.
+  </description>
+  <author>Maintained by David Millard</author>
   <license>BSD</license>  
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/test_robot</url>
   <depend stack="ros" />
-
 </stack>

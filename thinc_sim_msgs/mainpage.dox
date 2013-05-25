@@ -2,7 +2,7 @@
 \mainpage
 \htmlinclude manifest.html
 
-\b cvg_sim_test 
+\b thinc_sim_msgs 
 
 <!-- 
 Provide an overview of your package.

@@ -1,0 +1,41 @@
+<package>
+  <description brief="thinc_sim_gazebo_plugins">
+    thinc_sim_gazebo_plugins provides plugins for using ARDrone Parrot
+    Quadrotors in gazebo.
+
+    simple_controller provides a motion controller allowing control of the
+    quadrotor through geometry_msgs/Twist messages.  state_controller provides
+    a state controller for takeoff and landing.
+
+    This packages intentionally removes drift from quadrotors (which can be
+    significant in the real world).
+
+    Six sensor plugins are included: IMU sensor plugin, an earth magnetic
+    field sensor plugin, a GPS sensor plugin and a sonar ranger plugin.
+
+    Except hector_quadrotor_state_controller, plugins are from
+    tu-darmstadt-ros-pkg by Stefan Kohlbrecher, TU Darmstadt.
+  </description>
+  <author>David Millard</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/thinc_sim_gazebo_plugins</url>
+  <depend package="roscpp"/>
+  <depend package="gazebo"/>
+  <depend package="std_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="image_transport"/>
+  <depend package="nav_msgs"/>
+  <depend package="thinc_sim_msgs"/>
+  <depend package="ardrone_autonomy"/>
+  <export>
+    <cpp
+      cflags="-I${prefix}/include"
+      lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib"
+    />
+    <gazebo plugin_path="${prefix}/lib" />
+  </export>
+</package>
+
+
