@@ -6,7 +6,7 @@ Installation
 
 ```bash
 $ cd ~/ros/stacks   # or equivalent
-$ git clone https://github.com/dmillard/thinc_simulator.git
+$ git clone https://github.com/capparell/thinc_simulator.git
 $ rospack profile && rosstack profile
 $ rosmake thinc_sim_msgs
 $ rosmake message_to_tf
@@ -17,12 +17,12 @@ Notes
 -----
 
 * This requires https://github.com/AutonomyLab/ardrone_autonomy
-* This was designed with https://github.com/dmillard/ardrone_thinc
+* This was designed with https://github.com/capparell/ardrone_thinc
 
 Usage
 -----
 
-To open gazebo with a grid with two drones on it, run
+To open gazebo with a grid with three drones on it, run
 
 ```bash
 $ roslaunch thinc_sim_gazebo grid_flight.launch
