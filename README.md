@@ -11,6 +11,7 @@ $ rospack profile && rosstack profile
 $ rosmake thinc_sim_msgs
 $ rosmake message_to_tf
 $ rosmake thinc_sim_gazebo_plugins
+$ rosmake thinc_sim_gazebo
 ```
 
 Notes
