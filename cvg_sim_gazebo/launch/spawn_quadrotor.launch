@@ -13,7 +13,7 @@
    <!-- send the robot XML to param server -->
    <param
      name="robot_description"
-     command="$(find xacro)/xacro.py '$(arg model)'"
+     command="$(find xacro)/xacro.py '$(arg model)' namespace:=/$(arg robot_namespace)"
    />
    
    <!-- push robot_description to factory and spawn robot in gazebo -->

@@ -9,9 +9,10 @@ xmlns:xacro="http://ros.org/wiki/xacro"
   <xacro:macro name="quadrotor_controller">
     <gazebo>
       <plugin name="quadrotor_simple_controller" filename="libhector_gazebo_quadrotor_simple_controller.so">
+        <robotNamespace>$(arg namespace)</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
-        <bodyName>base_link</bodyName>
+<!--        <bodyName>base_link</bodyName> -->
         <stateTopic>ground_truth/state</stateTopic>
         <imuTopic>ardrone/imu</imuTopic>
         <topicName>cmd_vel</topicName>
@@ -34,9 +35,10 @@ xmlns:xacro="http://ros.org/wiki/xacro"
       </plugin>
 
       <plugin name="quadrotor_state_controller" filename="libhector_gazebo_quadrotor_state_controller.so">
+        <robotNamespace>$(arg namespace)</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
-        <bodyName>base_link</bodyName>
+<!--        <bodyName>base_link</bodyName> -->
         <stateTopic>ground_truth/state</stateTopic>
         <imuTopic>ardrone/imu</imuTopic>
         <sonarTopic>sonar_height</sonarTopic>
