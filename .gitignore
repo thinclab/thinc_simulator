@@ -16,11 +16,7 @@
 *~
 
 
-**/bin/
-**/build/
-**/msg_gen/
-**/srv_gen/
+cvg_sim_gazebo/meshes/grid.dae
+cvg_sim_gazebo/meshes/grid.png
+cvg_sim_gazebo/worlds/grid.world
 
-thinc_sim_msgs/src/thinc_sim_msgs/
-thinc_sim_gazebo/src/thinc_sim_gazebo/
-thinc_sim_gazebo_plugins/src/thinc_sim_gazebo_plugins/
