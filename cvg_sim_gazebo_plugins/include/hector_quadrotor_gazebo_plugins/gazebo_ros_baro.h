@@ -38,7 +38,7 @@
 #else
   #include <geometry_msgs/PointStamped.h>
 #endif
-#include <tum_sim_msgs/Altimeter.h>
+#include <cvg_sim_msgs/Altimeter.h>
 
 #include <hector_gazebo_plugins/sensor_model.h>
 
@@ -72,7 +72,7 @@ private:
 #else
   geometry_msgs::PointStamped height_;
 #endif
-  tum_sim_msgs::Altimeter altimeter_;
+  cvg_sim_msgs::Altimeter altimeter_;
 
   std::string namespace_;
   std::string height_topic_;

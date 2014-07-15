@@ -4,7 +4,7 @@
   <param name="/use_sim_time" value="true" />
   <node
     name="gazebo" pkg="gazebo" type="gazebo"
-    args="$(find tum_sim_gazebo)/worlds/grid.world"
+    args="$(find cvg_sim_gazebo)/worlds/grid.world"
     respawn="false"
     output="screen"
   />
