@@ -6,12 +6,12 @@ Installation
 
 ```bash
 $ cd ~/ros/stacks   # or equivalent
-$ git clone https://github.com/capparell/thinc_simulator.git
+$ git clone https://github.com/capparell/tum_simulator.git
 $ rospack profile && rosstack profile
-$ rosmake thinc_sim_msgs
+$ rosmake tum_sim_msgs
 $ rosmake message_to_tf
-$ rosmake thinc_sim_gazebo_plugins
-$ rosmake thinc_sim_gazebo
+$ rosmake tum_sim_gazebo_plugins
+$ rosmake tum_sim_gazebo
 ```
 
 Notes
@@ -26,7 +26,7 @@ Usage
 To open gazebo with a grid with three drones on it, run
 
 ```bash
-$ roslaunch thinc_sim_gazebo grid_flight.launch
+$ roslaunch tum_sim_gazebo grid_flight.launch
 ```
 
 To change the grid size, you must edit the launch file.  Gazebo/ROS doesn't
