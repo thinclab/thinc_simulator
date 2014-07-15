@@ -8,8 +8,7 @@
    <arg name="R" default="0"/>
    <arg name="P" default="0"/>
    <arg name="Y" default="0"/>
-   <arg name="modelname" default="quadrotor"/>
-   <arg name="spawncoords" default="-x 0.0 -y 0.0 -z 0.5"/>
+   <arg name="robot_namespace" default="/"/>
 
    <!-- send the robot XML to param server -->
    <param
@@ -18,7 +17,7 @@
    />
    
    <!-- push robot_description to factory and spawn robot in gazebo -->
-   <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model"
+   <node name="$(anon spawn_robot)" pkg="gazebo_ros" type="spawn_model"
    args="-param robot_description
    -urdf
    -x '$(arg x)'
@@ -27,13 +26,13 @@
    -R '$(arg R)'
    -P '$(arg P)'
    -Y '$(arg Y)'
-   -model quadrotor" -robot_namespace $(arg modelname)
+   -model $(arg robot_namespace) -robot_namespace $(arg robot_namespace)
      respawn="false" output="screen"/>
      
    <!-- start robot state publisher -->
    <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" output="screen" >
      <param name="publish_frequency" type="double" value="50.0" />
-     <param name="tf_prefix" type="string" value="$(arg modelname)" />
+     <param name="tf_prefix" type="string" value="$(arg robot_namespace)" />
    </node>
 
    <node name="ground_truth_to_tf" pkg="message_to_tf" type="message_to_tf" output="screen">
