@@ -47,6 +47,6 @@
   <run_depend>OpenCV</run_depend>
 
   <export>
-    <gazebo gazebo_media_path="${prefix}" />
+    <gazebo_ros gazebo_media_path="${prefix}" gazebo_model_path="${prefix}/meshes"/>
   </export>
 </package>

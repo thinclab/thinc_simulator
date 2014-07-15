@@ -3,11 +3,11 @@
 <launch>
 	<node
 		name="gen_texture" pkg="cvg_sim_gazebo" type="gen_texture"
-		args="8 5 1 1 $(find cvg_sim_gazebo)/Media/models/grid.png $(find cvg_sim_gazebo)/worlds/grid.world"
+		args="8 5 1 1 $(find cvg_sim_gazebo)/meshes/grid.png $(find cvg_sim_gazebo)/worlds/grid.world"
 	/>
 	<node
 		name="gen_dae" pkg="cvg_sim_gazebo" type="gen_dae.py"
-		args="5 8 2 2 $(find cvg_sim_gazebo)/Media/models/grid.dae"
+		args="5 8 2 2 $(find cvg_sim_gazebo)/meshes/grid.dae"
 	/>
 
 	<!-- Start Gazebo with wg world running in (max) realtime -->
