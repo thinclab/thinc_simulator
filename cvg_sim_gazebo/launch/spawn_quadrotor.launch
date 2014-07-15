@@ -26,7 +26,7 @@
    -R '$(arg R)'
    -P '$(arg P)'
    -Y '$(arg Y)'
-   -model $(arg robot_namespace) -robot_namespace $(arg robot_namespace)
+   -model $(arg robot_namespace) -robot_namespace $(arg robot_namespace)"
      respawn="false" output="screen"/>
      
    <!-- start robot state publisher -->
