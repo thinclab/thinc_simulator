@@ -1,7 +1,13 @@
 <?xml version="1.0"?>
 
 <launch>
-   <arg name="model" default="$(find tum_sim_gazebo)/urdf/quadrotor.urdf.xacro"/>
+   <arg name="model" default="$(find cvg_sim_gazebo)/urdf/quadrotor.urdf.xacro"/>
+   <arg name="x" default="0"/>
+   <arg name="y" default="0"/>
+   <arg name="z" default="0.5"/>
+   <arg name="R" default="0"/>
+   <arg name="P" default="0"/>
+   <arg name="Y" default="0"/>
    <arg name="modelname" default="quadrotor"/>
    <arg name="spawncoords" default="-x 0.0 -y 0.0 -z 0.5"/>
 
@@ -12,11 +18,17 @@
    />
    
    <!-- push robot_description to factory and spawn robot in gazebo -->
-   <node name="spawn_robot" pkg="gazebo" type="spawn_model"
-         args="-param robot_description -urdf $(arg spawncoords)
-               -model $(arg modelname) -robot_namespace $(arg modelname)"
-         respawn="false" output="screen"
-   />
+   <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model"
+   args="-param robot_description
+   -urdf
+   -x '$(arg x)'
+   -y '$(arg y)'
+   -z '$(arg z)'
+   -R '$(arg R)'
+   -P '$(arg P)'
+   -Y '$(arg Y)'
+   -model quadrotor" -robot_namespace $(arg modelname)
+     respawn="false" output="screen"/>
      
    <!-- start robot state publisher -->
    <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" output="screen" >

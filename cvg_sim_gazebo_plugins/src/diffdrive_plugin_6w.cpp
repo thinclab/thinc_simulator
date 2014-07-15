@@ -35,7 +35,7 @@
 
 #include <hector_gazebo_plugins/diffdrive_plugin_6w.h>
 #include "common/Events.hh"
-#include "physics/physics.h"
+#include "physics/physics.hh"
 
 #include <ros/ros.h>
 #include <tf/transform_broadcaster.h>
@@ -164,7 +164,7 @@ void DiffDrivePlugin6W::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
   // New Mechanism for Updating every World Cycle
   // Listen to the update event. This event is broadcast every
   // simulation iteration.
-  updateConnection = event::Events::ConnectWorldUpdateStart(
+  updateConnection = event::Events::ConnectWorldUpdateBegin(
       boost::bind(&DiffDrivePlugin6W::Update, this));
 }
 
@@ -307,8 +307,8 @@ void DiffDrivePlugin6W::publish_odometry()
   math::Vector3 velocity = link->GetWorldLinearVel();
   math::Vector3 angular_velocity = link->GetWorldAngularVel();
 
-  btQuaternion qt(pose.rot.x, pose.rot.y, pose.rot.z, pose.rot.w);
-  btVector3 vt(pose.pos.x, pose.pos.y, pose.pos.z);
+  tf::Quaternion qt(pose.rot.x, pose.rot.y, pose.rot.z, pose.rot.w);
+  tf::Vector3 vt(pose.pos.x, pose.pos.y, pose.pos.z);
   tf::Transform base_footprint_to_odom(qt, vt);
 
   transform_broadcaster_->sendTransform(tf::StampedTransform(base_footprint_to_odom,
