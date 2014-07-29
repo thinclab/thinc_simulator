@@ -71,7 +71,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <bodyName>base_link</bodyName>
         <topicName>ground_truth/state</topicName>
         <gaussianNoise>0.0</gaussianNoise>
-        <frameName>nav</frameName>
+        <frameName>map</frameName>
       </plugin>
 
     </gazebo>
