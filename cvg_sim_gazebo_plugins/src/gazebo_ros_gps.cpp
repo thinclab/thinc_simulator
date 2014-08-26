@@ -83,11 +83,12 @@ void GazeboRosGps::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
   if (_sdf->HasElement("updateRate")) update_rate = _sdf->GetElement("updateRate")->Get<double>();
   update_period = update_rate > 0.0 ? 1.0/update_rate : 0.0;
 
-  if (!_sdf->HasElement("frameId"))
+  frame_id_ = "gps_base_link";
+  /*if (!_sdf->HasElement("frameId"))
     frame_id_ = link_name_;
   else
     frame_id_ = _sdf->GetElement("frameId")->Get<std::string>();
-
+    */
   if (!_sdf->HasElement("topicName"))
     fix_topic_ = "fix";
   else
