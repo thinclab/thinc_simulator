@@ -54,6 +54,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <alwaysOn>true</alwaysOn>
         <updateRate>1.0</updateRate>
         <bodyName>base_link</bodyName>
+        <frameId>gps_base_link</frameId>
         <topicName>fix</topicName>
         <velocityTopicName>fix_velocity</velocityTopicName>
         <referenceLatitude>-25.291084</referenceLatitude>
