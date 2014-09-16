@@ -57,8 +57,8 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <frameId>gps_base_link</frameId>
         <topicName>fix</topicName>
         <velocityTopicName>fix_velocity</velocityTopicName>
-        <referenceLatitude>-25.291084</referenceLatitude>
-        <referenceLongitude>-57.629623</referenceLongitude>
+        <referenceLatitude>37.360500</referenceLatitude>
+        <referenceLongitude>-121.867514</referenceLongitude>
         <referenceAltitude>136</referenceAltitude>
         <drift>5.0 5.0 5.0</drift>
         <gaussianNoise>0.1 0.1 0.1</gaussianNoise>
