@@ -311,7 +311,7 @@ void GazeboQuadrotorStateController::Update()
   common::Time sim_time = world->GetSimTime();
   double dt = (sim_time - last_time).Double();
   // Update rate is 200/per second
-  if (dt < 0.005) return;
+  if (dt < 0.02) return;
 
   // Get Pose/Orientation from Gazebo (if no state subscriber is active)
   if (imu_topic_.empty()) {
