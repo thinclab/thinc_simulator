@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<launch>
+	<node
+		name="gen_texture" pkg="cvg_sim_gazebo" type="gen_texture"
+		args="8 5 1 1 $(find cvg_sim_gazebo)/meshes/grid.png $(find cvg_sim_gazebo)/worlds/grid.world"
+	/>
+	<node
+		name="gen_dae" pkg="cvg_sim_gazebo" type="gen_dae.py"
+		args="5 8 2 2 $(find cvg_sim_gazebo)/meshes/grid.dae"
+	/>
+
+	<!-- Start Gazebo with wg world running in (max) realtime -->
+	<include file="$(find cvg_sim_gazebo)/launch/grid.launch"/>
+
+	<!-- Spawn a drone that its namespace matches what tum_ardrone package looks for -->
+	<group>
+		<param name="tf_prefix" value="ardrone"/>
+		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+			<arg name="x" value="1.00"/>
+			<arg name="y" value="-4.00"/>
+			<arg name="z" value="0.70"/>
+		</include>
+	</group>
+
+</launch>
