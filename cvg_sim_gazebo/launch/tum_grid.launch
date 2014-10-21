@@ -17,8 +17,8 @@
 	<group>
 		<param name="tf_prefix" value="ardrone"/>
 		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
-			<arg name="x" value="1.00"/>
-			<arg name="y" value="-4.00"/>
+			<arg name="x" value="-7.00"/>
+			<arg name="y" value="0.00"/>
 			<arg name="z" value="0.70"/>
 		</include>
 	</group>
