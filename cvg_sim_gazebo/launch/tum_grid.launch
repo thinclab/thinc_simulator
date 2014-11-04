@@ -22,5 +22,35 @@
 			<arg name="z" value="0.70"/>
 		</include>
 	</group>
+	
+	<group ns="drone1">
+		<param name="tf_prefix" value="drone1"/>
+		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+			<arg name="robot_namespace" value="drone1"/>
+			<arg name="x" value="-1.00"/>
+			<arg name="y" value="2.00"/>
+			<arg name="z" value="0.70"/>
+		</include>
+	</group>
+	
+	<group ns="drone2">
+		<param name="tf_prefix" value="drone2"/>
+		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+			<arg name="robot_namespace" value="drone2"/>
+			<arg name="x" value="-1.00"/>
+			<arg name="y" value="-2.00"/>
+			<arg name="z" value="0.70"/>
+		</include>
+	</group>
+	
+		<group ns="drone3">
+		<param name="tf_prefix" value="drone3"/>
+		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+			<arg name="robot_namespace" value="drone3"/>
+			<arg name="x" value="-1.00"/>
+			<arg name="y" value="0.00"/>
+			<arg name="z" value="0.70"/>
+		</include>
+	</group>
 
 </launch>
