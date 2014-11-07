@@ -23,6 +23,7 @@
 		</include>
 	</group>
 
+	<!--
 	<group ns="drone1">
 		<param name="tf_prefix" value="drone1"/>
 		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
@@ -42,7 +43,8 @@
 			<arg name="z" value="0.70"/>
 		</include>
 	</group>
-
+	-->
+	
 	<group ns="drone3">
 		<param name="tf_prefix" value="drone3"/>
 		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
