@@ -10,8 +10,17 @@
 		args="5 8 2 2 $(find cvg_sim_gazebo)/meshes/grid.dae"
 	/>
 
+	<node
+                name="gen_" pkg="cvg_sim_gazebo" type="gen_dae.py"
+                args="5 8 2 2 $(find cvg_sim_gazebo)/meshes/grid.dae"
+        />
+
 	<!-- Start Gazebo with wg world running in (max) realtime -->
-	<include file="$(find cvg_sim_gazebo)/launch/grid.launch"/>
+	<!-- <include file="$(find cvg_sim_gazebo)/launch/grid.launch"> -->
+
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="world_name" value="$(find cvg_sim_gazebo)/worlds/houses.world"/>
+	</include>
 
 	<!-- Spawn a drone that its namespace matches what tum_ardrone package looks for -->
 	<group>
@@ -74,5 +83,7 @@
 			<arg name="z" value="0.70"/>
 		</include>
 	</group>
+
+	
 
 </launch>
