@@ -60,10 +60,13 @@ xmlns:xacro="http://ros.org/wiki/xacro"
 <!--        <bodyName>base_link</bodyName> -->
         <topicName>fix</topicName>
         <velocityTopicName>fix_velocity</velocityTopicName>
+        <referenceLatitude>37.360500</referenceLatitude>
+        <referenceLongitude>-121.867514</referenceLongitude>
+        <referenceAltitude>136</referenceAltitude>
         <drift>5.0 5.0 5.0</drift>
         <gaussianNoise>0.1 0.1 0.1</gaussianNoise>
         <velocityDrift>0 0 0</velocityDrift>
-        <velocityGaussianNoise>0.1 0.1 0.1</velocityGaussianNoise>
+        <velocityGaussianNoise>0.0 0.0 0.0</velocityGaussianNoise>
       </plugin>
 
       <plugin name="quadrotor_groundtruth_sim" filename="libgazebo_ros_p3d.so">
