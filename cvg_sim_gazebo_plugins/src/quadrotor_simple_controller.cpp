@@ -317,13 +317,13 @@ void GazeboQuadrotorSimpleController::Update()
   // update controllers
   force.Set(0.0, 0.0, 0.0);
   torque.Set(0.0, 0.0, 0.0);
-  double pitch_command =  controllers_.velocity_x.update(velocity_command_.linear.x, velocity_xy.x, acceleration_xy.x, dt) / gravity;
-  double roll_command  = -controllers_.velocity_y.update(velocity_command_.linear.y, velocity_xy.y, acceleration_xy.y, dt) / gravity;
+  double pitch_command =  velocity_command_.linear.x * 0.21;
+  double roll_command  = -velocity_command_.linear.y * 0.21;
   torque.x = inertia.x *  controllers_.roll.update(roll_command, euler.x, angular_velocity_body.x, dt);
   torque.y = inertia.y *  controllers_.pitch.update(pitch_command, euler.y, angular_velocity_body.y, dt);
   // torque.x = inertia.x *  controllers_.roll.update(-velocity_command_.linear.y/gravity, euler.x, angular_velocity_body.x, dt);
   // torque.y = inertia.y *  controllers_.pitch.update(velocity_command_.linear.x/gravity, euler.y, angular_velocity_body.y, dt);
-  torque.z = inertia.z *  controllers_.yaw.update(velocity_command_.angular.z, angular_velocity.z, 0, dt);
+  torque.z = inertia.z *  controllers_.yaw.update(velocity_command_.angular.z * 1.66, angular_velocity.z, 0, dt);
   force.z  = mass      * (controllers_.velocity_z.update(velocity_command_.linear.z,  velocity.z, acceleration.z, dt) + load_factor * gravity);
   if (max_force_ > 0.0 && force.z > max_force_) force.z = max_force_;
   if (force.z < 0.0) force.z = 0.0;
