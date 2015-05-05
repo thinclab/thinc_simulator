@@ -93,6 +93,11 @@ int main(int argc, char ** argv) {
     world_output += "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
     world_output += "<sdf version=\"1.4\">\n"; 
     world_output += "  <world name=\"default\">\n";
+    world_output += "    <gui>\n";
+    world_output += "      <camera name=\"main\">\n";
+    world_output += "        <pose>-6 -1 20 0 1.3 0</pose>\n";
+    world_output += "      </camera>\n";
+    world_output += "    </gui>\n";
     world_output += "    <scene>\n"; 
     world_output +="      <ambient>0.5 0.5 0.5 1</ambient>\n";
     world_output +="      <background>0.5 0.5 0.5 1</background>\n";
