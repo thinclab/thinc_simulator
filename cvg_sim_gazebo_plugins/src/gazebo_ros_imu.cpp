@@ -225,7 +225,8 @@ bool GazeboRosIMU::ServiceCallback(std_srvs::Empty::Request &req,
   return true;
 }
 
-bool GazeboRosIMU::SetAccelBiasCallback(cvg_sim_gazebo_plugins::SetBias::Request &req, cvg_sim_gazebo_plugins::SetBias::Response &res)
+bool
+GazeboRosIMU::SetAccelBiasCallback(cvg_sim_gazebo_plugins::SetBias::Request &req, cvg_sim_gazebo_plugins::SetBias::Response &res)
 {
   boost::mutex::scoped_lock scoped_lock(lock);
   accelModel.reset(math::Vector3(req.bias.x, req.bias.y, req.bias.z));

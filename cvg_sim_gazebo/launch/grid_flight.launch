@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<launch>
+	<node
+		name="gen_texture" pkg="cvg_sim_gazebo" type="gen_texture"
+		args="8 5 1 1 $(find cvg_sim_gazebo)/meshes/grid.png $(find cvg_sim_gazebo)/worlds/grid.world"
+	/>
+	<node
+		name="gen_dae" pkg="cvg_sim_gazebo" type="gen_dae.py"
+		args="5 8 2 2 $(find cvg_sim_gazebo)/meshes/grid.dae"
+	/>
+
+	<!-- Start Gazebo with wg world running in (max) realtime -->
+	<include file="$(find cvg_sim_gazebo)/launch/grid.launch"/>
+
+	<!-- Spawn simulated quadrotor uav -->
+	<group ns="drone0"> 
+		<param name="tf_prefix" value="drone0"/>
+		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+			<arg name="robot_namespace" value="drone0"/>
+			<arg name="x" value="1.00"/>
+			<arg name="y" value="4.00"/>
+			<arg name="z" value="0.70"/>
+		</include>
+	</group> 
+
+	<group ns="drone1">
+		<param name="tf_prefix" value="drone1"/>
+		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+			<arg name="robot_namespace" value="drone1"/>
+			<arg name="x" value="-7.00"/>
+			<arg name="y" value="-4.00"/>
+			<arg name="z" value="0.70"/>
+		</include>
+	</group>
+
+	<group ns="drone2">
+		<param name="tf_prefix" value="drone2"/>
+		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+			<arg name="robot_namespace" value="drone2"/>
+			<arg name="x" value="-7.00"/>
+			<arg name="y" value="4.00"/>
+			<arg name="z" value="0.70"/>
+		</include>
+	</group>
+
+</launch>

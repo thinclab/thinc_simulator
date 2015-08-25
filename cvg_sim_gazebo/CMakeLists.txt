@@ -8,8 +8,10 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
 )
 
+find_package(OpenCV REQUIRED)
+
 ## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+#find_package(opencv2 REQUIRED COMPONENTS system)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -77,11 +79,12 @@ find_package(catkin REQUIRED COMPONENTS
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
+
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES cvg_sim_gazebo
-#  CATKIN_DEPENDS gazebo
-#  DEPENDS system_lib
+  CATKIN_DEPENDS gazebo_ros
+  DEPENDS opencv2
 )
 
 ###########
@@ -101,16 +104,14 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-# add_executable(cvg_sim_gazebo_node src/cvg_sim_gazebo_node.cpp)
+add_executable(gen_texture src/gen_texture.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(cvg_sim_gazebo_node cvg_sim_gazebo_generate_messages_cpp)
+add_dependencies(gen_texture ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(cvg_sim_gazebo_node
-#   ${catkin_LIBRARIES}
-# )
+target_link_libraries(gen_texture ${catkin_LIBRARIES} ${OpenCV_LIBS})
 
 #############
 ## Install ##

@@ -82,7 +82,7 @@ void GazeboQuadrotorSimpleController::Load(physics::ModelPtr _model, sdf::Elemen
     velocity_topic_ = _sdf->GetElement("topicName")->Get<std::string>();
 
   if (!_sdf->HasElement("navdataTopic"))
-    navdata_topic_ = "/ardrone/navdata";
+    navdata_topic_ = "ardrone/navdata";
   else
     navdata_topic_ = _sdf->GetElement("navdataTopic")->Get<std::string>();
 
@@ -166,7 +166,7 @@ void GazeboQuadrotorSimpleController::Load(physics::ModelPtr _model, sdf::Elemen
       ros::VoidPtr(), &callback_queue_);
     navdata_subscriber_ = node_handle_->subscribe(ops);
   }
-    //m_navdataPub = node_handle_->advertise< ardrone_autonomy::Navdata >( "/ardrone/navdata", 10 );
+//    m_navdataPub = node_handle_->advertise< ardrone_autonomy::Navdata >( "ardrone/navdata", 10 );
 
 
   // subscribe imu
@@ -224,18 +224,23 @@ void GazeboQuadrotorSimpleController::VelocityCallback(const geometry_msgs::Twis
   // generate noise
   if(time_counter_for_drift_noise > motion_drift_noise_time_)
   {
-    drift_noise[0] = 2*motion_drift_noise_*(drand48()-0.5);
-    drift_noise[1] = 2*motion_drift_noise_*(drand48()-0.5);
-    drift_noise[2] = 2*motion_drift_noise_*(drand48()-0.5);
-    drift_noise[3] = 2*motion_drift_noise_*(drand48()-0.5);
+    std::cout << "drift set" << std::endl;
+//    drift_noise[0] = 2*motion_drift_noise_*(drand48()-0.5);
+    drift_noise[0] = 0; 
+//    drift_noise[1] = 2*motion_drift_noise_*(drand48()-0.5);
+    drift_noise[1] = 0; 
+    //drift_noise[2] = 2*motion_drift_noise_*(drand48()-0.5);
+    drift_noise[2] = 0;
+    //drift_noise[3] = 0.1*motion_drift_noise_*(drand48()-0.5);
+    drift_noise[3] = 0;
     time_counter_for_drift_noise = 0.0;
   }
   time_counter_for_drift_noise += dt;
 
-  velocity_command_.linear.x += drift_noise[0] + 2*motion_small_noise_*(drand48()-0.5);
-  velocity_command_.linear.y += drift_noise[1] + 2*motion_small_noise_*(drand48()-0.5);
-  velocity_command_.linear.z += drift_noise[2] + 2*motion_small_noise_*(drand48()-0.5);
-  velocity_command_.angular.z += drift_noise[3] + 2*motion_small_noise_*(drand48()-0.5);
+  velocity_command_.linear.x += drift_noise[0];// + 2*motion_small_noise_*(drand48()-0.5);
+  velocity_command_.linear.y += drift_noise[1];// + 2*motion_small_noise_*(drand48()-0.5);
+  velocity_command_.linear.z += drift_noise[2];// + 2*motion_small_noise_*(drand48()-0.5);
+  velocity_command_.angular.z += drift_noise[3];// + 2*motion_small_noise_*(drand48()-0.5);
 //  velocity_command_.angular.z *= 2;
 
 }
