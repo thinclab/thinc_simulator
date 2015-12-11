@@ -35,7 +35,7 @@
 #include <ros/ros.h>
 #include <sensor_msgs/NavSatFix.h>
 #include <geometry_msgs/Vector3Stamped.h>
-#include <hector_gazebo_plugins/sensor_model.h>
+#include <thinc_gazebo_plugins/sensor_model.h>
 
 namespace gazebo
 {

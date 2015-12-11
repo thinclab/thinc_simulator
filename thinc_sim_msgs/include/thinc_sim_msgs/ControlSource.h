@@ -29,7 +29,7 @@
 #ifndef HECTOR_UAV_MSGS_CONTROLSOURCE_H
 #define HECTOR_UAV_MSGS_CONTROLSOURCE_H
 
-namespace hector_uav_msgs
+namespace thinc_uav_msgs
 {
   typedef uint8_t ControlSource;
 

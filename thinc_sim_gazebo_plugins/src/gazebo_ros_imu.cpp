@@ -54,7 +54,7 @@
  */
 //=================================================================================================
 
-#include <hector_gazebo_plugins/gazebo_ros_imu.h>
+#include <thinc_gazebo_plugins/gazebo_ros_imu.h>
 #include "gazebo/common/Events.hh"
 #include "gazebo/physics/physics.hh"
 
@@ -273,7 +273,7 @@ void GazeboRosIMU::Update()
   gravity       = world->GetPhysicsEngine()->GetGravity();
   gravity_body  = orientation.RotateVectorReverse(gravity);
   double gravity_length = gravity.GetLength();
-  ROS_DEBUG_NAMED("hector_gazebo_ros_imu", "gravity_world = [%g %g %g]", gravity.x, gravity.y, gravity.z);
+  ROS_DEBUG_NAMED("thinc_gazebo_ros_imu", "gravity_world = [%g %g %g]", gravity.x, gravity.y, gravity.z);
 
   // add gravity vector to body acceleration
   accel = accel - gravity_body;
@@ -282,7 +282,7 @@ void GazeboRosIMU::Update()
   accel = accel + accelModel.update(dt);
   rate  = rate  + rateModel.update(dt);
   headingModel.update(dt);
-  ROS_DEBUG_NAMED("hector_gazebo_ros_imu", "Current errors: accel = [%g %g %g], rate = [%g %g %g], heading = %g",
+  ROS_DEBUG_NAMED("thinc_gazebo_ros_imu", "Current errors: accel = [%g %g %g], rate = [%g %g %g], heading = %g",
                  accelModel.getCurrentError().x, accelModel.getCurrentError().y, accelModel.getCurrentError().z,
                  rateModel.getCurrentError().x, rateModel.getCurrentError().y, rateModel.getCurrentError().z,
                  headingModel.getCurrentError());

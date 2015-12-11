@@ -13,7 +13,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
 -->
   <xacro:macro name="quadrotor_sensors">
     <gazebo>
-      <plugin name="quadrotor_imu_sim" filename="libhector_gazebo_ros_imu.so">
+      <plugin name="quadrotor_imu_sim" filename="libthinc_gazebo_ros_imu.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>100.0</updateRate>
         <robotNamespace>$(arg namespace)</robotNamespace>
@@ -30,7 +30,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <headingGaussianNoise>0.00</headingGaussianNoise>
       </plugin>
 
-      <plugin name="quadrotor_baro_sim" filename="libhector_gazebo_ros_baro.so">
+      <plugin name="quadrotor_baro_sim" filename="libthinc_gazebo_ros_baro.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>10.0</updateRate>
         <robotNamespace>$(arg namespace)</robotNamespace>
@@ -42,7 +42,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <gaussianNoise>0.5</gaussianNoise>
       </plugin>
 
-      <plugin name="quadrotor_magnetic_sim" filename="libhector_gazebo_ros_magnetic.so">
+      <plugin name="quadrotor_magnetic_sim" filename="libthinc_gazebo_ros_magnetic.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>10.0</updateRate>
         <robotNamespace>$(arg namespace)</robotNamespace>
@@ -53,7 +53,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <gaussianNoise>1.3e-2 1.3e-2 1.3e-2</gaussianNoise>
       </plugin>
 
-      <plugin name="quadrotor_gps_sim" filename="libhector_gazebo_ros_gps.so">
+      <plugin name="quadrotor_gps_sim" filename="libthinc_gazebo_ros_gps.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>4.0</updateRate>
         <robotNamespace>$(arg namespace)</robotNamespace>

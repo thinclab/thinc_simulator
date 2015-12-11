@@ -29,10 +29,10 @@
 #ifndef HECTOR_UAV_MSGS_RC_FUNCTIONS_H
 #define HECTOR_UAV_MSGS_RC_FUNCTIONS_H
 
-#include <hector_uav_msgs/RC.h>
+#include <thinc_uav_msgs/RC.h>
 #include <algorithm>
 
-namespace hector_uav_msgs {
+namespace thinc_uav_msgs {
 
   static inline const char *getFunctionString(uint8_t function)
   {
@@ -98,6 +98,6 @@ namespace hector_uav_msgs {
     }
   }
 
-} // namespace hector_uav_msgs
+} // namespace thinc_uav_msgs
 
 #endif // HECTOR_UAV_MSGS_RC_FUNCTIONS_H

@@ -72,7 +72,7 @@
 #include <sensor_msgs/Imu.h>
 #include <std_srvs/Empty.h>
 #include <thinc_sim_gazebo_plugins/SetBias.h>
-#include <hector_gazebo_plugins/sensor_model.h>
+#include <thinc_gazebo_plugins/sensor_model.h>
 
 namespace gazebo
 {

@@ -26,29 +26,27 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //=================================================================================================
 
-#ifndef HECTOR_GAZEBO_PLUGINS_GAZEBO_ROS_SONAR_H
-#define HECTOR_GAZEBO_PLUGINS_GAZEBO_ROS_SONAR_H
+#ifndef HECTOR_GAZEBO_PLUGINS_GAZEBO_ROS_MAGNETIC_H
+#define HECTOR_GAZEBO_PLUGINS_GAZEBO_ROS_MAGNETIC_H
 
 #include "gazebo/common/Plugin.hh"
 #include "gazebo/common/Time.hh"
 
-#include <ros/callback_queue.h>
 #include <ros/ros.h>
-
-#include <sensor_msgs/Range.h>
-#include <hector_gazebo_plugins/sensor_model.h>
+#include <geometry_msgs/Vector3Stamped.h>
+#include <thinc_gazebo_plugins/sensor_model.h>
 
 namespace gazebo
 {
 
-class GazeboRosSonar : public SensorPlugin
+class GazeboRosMagnetic : public ModelPlugin
 {
 public:
-  GazeboRosSonar();
-  virtual ~GazeboRosSonar();
+  GazeboRosMagnetic();
+  virtual ~GazeboRosMagnetic();
 
 protected:
-  virtual void Load(sensors::SensorPtr _sensor, sdf::ElementPtr _sdf);
+  virtual void Load(physics::ModelPtr _model, sdf::ElementPtr _sdf);
   virtual void Reset();
   virtual void Update();
 
@@ -56,21 +54,30 @@ private:
   /// \brief The parent World
   physics::WorldPtr world;
 
-  sensors::RaySensorPtr sensor_;
+  /// \brief The link referred to by this plugin
+  physics::LinkPtr link;
 
   ros::NodeHandle* node_handle_;
   ros::Publisher publisher_;
 
-  sensor_msgs::Range range_;
+  geometry_msgs::Vector3Stamped magnetic_field_;
+  gazebo::math::Vector3 magnetic_field_world_;
 
   std::string namespace_;
   std::string topic_;
+  std::string link_name_;
   std::string frame_id_;
 
-  SensorModel sensor_model_;
+  double magnitude_;
+  double reference_heading_;
+  double declination_;
+  double inclination_;
+
+  SensorModel3 sensor_model_;
 
   /// \brief save last_time
   common::Time last_time;
+  common::Time update_period;
 
   // Pointer to the update event connection
   event::ConnectionPtr updateConnection;
@@ -78,4 +85,4 @@ private:
 
 } // namespace gazebo
 
-#endif // HECTOR_GAZEBO_PLUGINS_GAZEBO_ROS_SONAR_H
+#endif // HECTOR_GAZEBO_PLUGINS_GAZEBO_ROS_MAGNETIC_H

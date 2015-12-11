@@ -8,7 +8,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
   <!-- Quadrotor Simple Controller Plugin -->
   <xacro:macro name="quadrotor_controller">
     <gazebo>
-      <plugin name="quadrotor_simple_controller" filename="libhector_gazebo_quadrotor_simple_controller.so">
+      <plugin name="quadrotor_simple_controller" filename="libthinc_gazebo_quadrotor_simple_controller.so">
         <robotNamespace>$(arg namespace)</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
@@ -34,7 +34,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
         <motionDriftNoiseTime>5.0</motionDriftNoiseTime>
       </plugin>
 
-      <plugin name="quadrotor_state_controller" filename="libhector_gazebo_quadrotor_state_controller.so">
+      <plugin name="quadrotor_state_controller" filename="libthinc_gazebo_quadrotor_state_controller.so">
         <robotNamespace>$(arg namespace)</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>

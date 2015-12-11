@@ -12,7 +12,7 @@
 */
 
 
-#include <hector_quadrotor_controller/quadrotor_state_controller.h>
+#include <thinc_quadrotor_controller/quadrotor_state_controller.h>
 #include "gazebo/common/Events.hh"
 #include "gazebo/physics/physics.hh"
 

@@ -26,33 +26,29 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //=================================================================================================
 
-#ifndef HECTOR_GAZEBO_PLUGINS_GAZEBO_ROS_BARO_H
-#define HECTOR_GAZEBO_PLUGINS_GAZEBO_ROS_BARO_H
+#ifndef HECTOR_GAZEBO_PLUGINS_GAZEBO_ROS_SONAR_H
+#define HECTOR_GAZEBO_PLUGINS_GAZEBO_ROS_SONAR_H
 
-#include "gazebo/gazebo.hh"
 #include "gazebo/common/Plugin.hh"
+#include "gazebo/common/Time.hh"
 
+#include <ros/callback_queue.h>
 #include <ros/ros.h>
-#ifdef USE_MAV_MSGS
-  #include <mav_msgs/Height.h>
-#else
-  #include <geometry_msgs/PointStamped.h>
-#endif
-#include <thinc_sim_msgs/Altimeter.h>
 
-#include <hector_gazebo_plugins/sensor_model.h>
+#include <sensor_msgs/Range.h>
+#include <thinc_gazebo_plugins/sensor_model.h>
 
 namespace gazebo
 {
 
-class GazeboRosBaro : public ModelPlugin
+class GazeboRosSonar : public SensorPlugin
 {
 public:
-  GazeboRosBaro();
-  virtual ~GazeboRosBaro();
+  GazeboRosSonar();
+  virtual ~GazeboRosSonar();
 
 protected:
-  virtual void Load(physics::ModelPtr _model, sdf::ElementPtr _sdf);
+  virtual void Load(sensors::SensorPtr _sensor, sdf::ElementPtr _sdf);
   virtual void Reset();
   virtual void Update();
 
@@ -60,34 +56,21 @@ private:
   /// \brief The parent World
   physics::WorldPtr world;
 
-  /// \brief The link referred to by this plugin
-  physics::LinkPtr link;
+  sensors::RaySensorPtr sensor_;
 
   ros::NodeHandle* node_handle_;
-  ros::Publisher height_publisher_;
-  ros::Publisher altimeter_publisher_;
+  ros::Publisher publisher_;
 
-#ifdef USE_MAV_MSGS
-  mav_msgs::Height height_;
-#else
-  geometry_msgs::PointStamped height_;
-#endif
-  thinc_sim_msgs::Altimeter altimeter_;
+  sensor_msgs::Range range_;
 
   std::string namespace_;
-  std::string height_topic_;
-  std::string altimeter_topic_;
-  std::string link_name_;
+  std::string topic_;
   std::string frame_id_;
-
-  double elevation_;
-  double qnh_;
 
   SensorModel sensor_model_;
 
   /// \brief save last_time
   common::Time last_time;
-  common::Time update_period;
 
   // Pointer to the update event connection
   event::ConnectionPtr updateConnection;
@@ -95,4 +78,4 @@ private:
 
 } // namespace gazebo
 
-#endif // HECTOR_GAZEBO_PLUGINS_GAZEBO_ROS_BARO_H
+#endif // HECTOR_GAZEBO_PLUGINS_GAZEBO_ROS_SONAR_H

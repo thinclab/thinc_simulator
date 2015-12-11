@@ -4,7 +4,7 @@
   <version>0.0.0</version>
   <description>
 	thinc_sim_msgs contains message form for thinc_sim_gazebo_plugins.
-     	This package is based on hector_uav_msgs by Stefan Kohlbrecher, TU Darmstadt.
+     	This package is based on thinc_uav_msgs by Stefan Kohlbrecher, TU Darmstadt.
   </description>
   <maintainer email="elliot@todo.todo">elliot</maintainer>
   <license>TODO</license>

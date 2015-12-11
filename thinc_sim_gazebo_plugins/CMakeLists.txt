@@ -86,7 +86,7 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-  LIBRARIES diffdrive_plugin_6w reset_plugin hector_gazebo_ros_imu hector_gazebo_ros_magnetic hector_gazebo_ros_gps hector_gazebo_ros_sonar hector_gazebo_ros_baro hector_gazebo_quadrotor_simple_controller hector_gazebo_quadrotor_state_controller
+  LIBRARIES diffdrive_plugin_6w reset_plugin thinc_gazebo_ros_imu thinc_gazebo_ros_magnetic thinc_gazebo_ros_gps thinc_gazebo_ros_sonar thinc_gazebo_ros_baro thinc_gazebo_quadrotor_simple_controller thinc_gazebo_quadrotor_state_controller
  CATKIN_DEPENDS image_transport
  DEPENDS system_lib
 )
@@ -112,23 +112,23 @@ target_link_libraries(diffdrive_plugin_6w ${Boost_LIBRARIES})
 
 add_library(reset_plugin src/reset_plugin.cpp)
 
-add_library(hector_gazebo_ros_imu src/gazebo_ros_imu.cpp)
-add_dependencies(hector_gazebo_ros_imu thinc_sim_gazebo_plugins_gencpp)
-target_link_libraries(hector_gazebo_ros_imu ${Boost_LIBRARIES})
+add_library(thinc_gazebo_ros_imu src/gazebo_ros_imu.cpp)
+add_dependencies(thinc_gazebo_ros_imu thinc_sim_gazebo_plugins_gencpp)
+target_link_libraries(thinc_gazebo_ros_imu ${Boost_LIBRARIES})
 
-add_library(hector_gazebo_ros_magnetic src/gazebo_ros_magnetic.cpp)
-add_library(hector_gazebo_ros_gps src/gazebo_ros_gps.cpp)
-add_library(hector_gazebo_ros_sonar src/gazebo_ros_sonar.cpp)
+add_library(thinc_gazebo_ros_magnetic src/gazebo_ros_magnetic.cpp)
+add_library(thinc_gazebo_ros_gps src/gazebo_ros_gps.cpp)
+add_library(thinc_gazebo_ros_sonar src/gazebo_ros_sonar.cpp)
 
-add_library(hector_gazebo_ros_baro src/gazebo_ros_baro.cpp)
-add_dependencies(hector_gazebo_ros_baro thinc_sim_msgs_gencpp)
+add_library(thinc_gazebo_ros_baro src/gazebo_ros_baro.cpp)
+add_dependencies(thinc_gazebo_ros_baro thinc_sim_msgs_gencpp)
 
-add_library(hector_gazebo_quadrotor_simple_controller src/quadrotor_simple_controller.cpp)
-add_dependencies(hector_gazebo_quadrotor_simple_controller ardrone_autonomy_gencpp)
+add_library(thinc_gazebo_quadrotor_simple_controller src/quadrotor_simple_controller.cpp)
+add_dependencies(thinc_gazebo_quadrotor_simple_controller ardrone_autonomy_gencpp)
 
-add_library(hector_gazebo_quadrotor_state_controller src/quadrotor_state_controller.cpp)
-add_dependencies(hector_gazebo_quadrotor_state_controller ardrone_autonomy_gencpp)
-target_link_libraries(hector_gazebo_quadrotor_state_controller ${image_transport_LIBRARIES})
+add_library(thinc_gazebo_quadrotor_state_controller src/quadrotor_state_controller.cpp)
+add_dependencies(thinc_gazebo_quadrotor_state_controller ardrone_autonomy_gencpp)
+target_link_libraries(thinc_gazebo_quadrotor_state_controller ${image_transport_LIBRARIES})
 
 
 ## Declare a cpp executable

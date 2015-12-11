@@ -26,7 +26,7 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //=================================================================================================
 
-#include <hector_quadrotor_gazebo_plugins/gazebo_ros_baro.h>
+#include <thinc_quadrotor_gazebo_plugins/gazebo_ros_baro.h>
 #include "gazebo/common/Events.hh"
 #include "gazebo/physics/physics.hh"
 
