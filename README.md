@@ -1,6 +1,8 @@
 thinc_simulator on Indigo
 =============
 
+This project is a fork of the [tum_simulator](https://github.com/tum-vision/tum_simulator) package to add support for multiple drones in one simulation as well as an automatic grid generator for demos.
+
 These packages are used to simulate the flying robot Ardrone in ROS environment using gazebo simulator. Totally they are 4 packages. Their functions are descript as below:
 
 1. thinc_sim_gazebo: contains object models, sensor models, quadrocopter models, flying environment information and individual launch files for each objects and pure environment without any other objects.

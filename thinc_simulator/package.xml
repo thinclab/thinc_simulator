@@ -3,7 +3,7 @@
   <name>thinc_simulator</name>
   <version>0.0.0</version>
   <description>The thinc_simulator</description>
-  <maintainer email="e.salisbury@ecs.soton.ac.uk">Elliot</maintainer>
+  <maintainer email="kbogert@uga.edu">Kenneth Bogert</maintainer>
   <license>BSD</license>
   <buildtool_depend>catkin</buildtool_depend>
   <run_depend>thinc_sim_msgs</run_depend>
