@@ -71,7 +71,7 @@
 #include <boost/thread/mutex.hpp>
 #include <sensor_msgs/Imu.h>
 #include <std_srvs/Empty.h>
-#include <cvg_sim_gazebo_plugins/SetBias.h>
+#include <thinc_sim_gazebo_plugins/SetBias.h>
 #include <hector_gazebo_plugins/sensor_model.h>
 
 namespace gazebo
@@ -146,8 +146,8 @@ namespace gazebo
       std::string serviceName;
 
       /// \brief Bias service callbacks
-      bool SetAccelBiasCallback(cvg_sim_gazebo_plugins::SetBias::Request &req, cvg_sim_gazebo_plugins::SetBias::Response &res);
-      bool SetRateBiasCallback(cvg_sim_gazebo_plugins::SetBias::Request &req, cvg_sim_gazebo_plugins::SetBias::Response &res);
+      bool SetAccelBiasCallback(thinc_sim_gazebo_plugins::SetBias::Request &req, thinc_sim_gazebo_plugins::SetBias::Response &res);
+      bool SetRateBiasCallback(thinc_sim_gazebo_plugins::SetBias::Request &req, thinc_sim_gazebo_plugins::SetBias::Response &res);
       ros::ServiceServer accelBiasService;
       ros::ServiceServer rateBiasService;
 

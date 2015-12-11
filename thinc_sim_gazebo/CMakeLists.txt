@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(cvg_sim_gazebo)
+project(thinc_sim_gazebo)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -82,7 +82,7 @@ find_package(OpenCV REQUIRED)
 
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES cvg_sim_gazebo
+#  LIBRARIES thinc_sim_gazebo
   CATKIN_DEPENDS gazebo_ros
   DEPENDS opencv2
 )
@@ -99,8 +99,8 @@ include_directories(
 )
 
 ## Declare a cpp library
-# add_library(cvg_sim_gazebo
-#   src/${PROJECT_NAME}/cvg_sim_gazebo.cpp
+# add_library(thinc_sim_gazebo
+#   src/${PROJECT_NAME}/thinc_sim_gazebo.cpp
 # )
 
 ## Declare a cpp executable
@@ -128,7 +128,7 @@ target_link_libraries(gen_texture ${catkin_LIBRARIES} ${OpenCV_LIBS})
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS cvg_sim_gazebo cvg_sim_gazebo_node
+# install(TARGETS thinc_sim_gazebo thinc_sim_gazebo_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -153,7 +153,7 @@ target_link_libraries(gen_texture ${catkin_LIBRARIES} ${OpenCV_LIBS})
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_cvg_sim_gazebo.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_thinc_sim_gazebo.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

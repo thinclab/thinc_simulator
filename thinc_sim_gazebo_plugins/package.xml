@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>cvg_sim_gazebo_plugins</name>
+  <name>thinc_sim_gazebo_plugins</name>
   <version>0.0.0</version>
-  <description>The cvg_sim_gazebo_plugins package</description>
+  <description>The thinc_sim_gazebo_plugins package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
@@ -19,7 +19,7 @@
   <!-- Url tags are optional, but mutiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <!-- <url type="website">http://wiki.ros.org/cvg_sim_gazebo_plugins</url> -->
+  <!-- <url type="website">http://wiki.ros.org/thinc_sim_gazebo_plugins</url> -->
 
 
   <!-- Author tags are optional, mutiple are allowed, one per tag -->

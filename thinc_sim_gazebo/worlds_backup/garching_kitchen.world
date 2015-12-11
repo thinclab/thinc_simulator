@@ -55,12 +55,12 @@
                 </visual>
             </link>
         </model>
-        <model name="cvg_logo" static="true">
-            <link name="cvg_logo_link">
+        <model name="thinc_logo" static="true">
+            <link name="thinc_logo_link">
                 <origin pose="-1.0 -2.40 3.00 1.571 0.0 0.0"/>
-                <visual name="cvg_logo" cast_shadows="false">
+                <visual name="thinc_logo" cast_shadows="false">
                     <geometry>
-                        <mesh filename="cvg_logo.dae" scale="5.45 0.95 0.5"/>
+                        <mesh filename="thinc_logo.dae" scale="5.45 0.95 0.5"/>
                     </geometry>
                 </visual>
             </link>

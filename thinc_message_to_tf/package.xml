@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>message_to_tf</name>
+  <name>thinc_message_to_tf</name>
   <version>0.0.0</version>
-  <description>The message_to_tf package</description>
+  <description>The thinc_message_to_tf package</description>
   <maintainer email="e.salisbury@ecs.soton.ac.uk">Elliot</maintainer>
   <license>BSD</license>
 

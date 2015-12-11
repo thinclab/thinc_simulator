@@ -2,30 +2,30 @@
 
 <launch>
 	<node
-		name="gen_texture" pkg="cvg_sim_gazebo" type="gen_texture"
-		args="8 5 1 1 $(find cvg_sim_gazebo)/meshes/grid.png $(find cvg_sim_gazebo)/worlds/grid.world"
+		name="gen_texture" pkg="thinc_sim_gazebo" type="gen_texture"
+		args="8 5 1 1 $(find thinc_sim_gazebo)/meshes/grid.png $(find thinc_sim_gazebo)/worlds/grid.world"
 	/>
 	<node
-		name="gen_dae" pkg="cvg_sim_gazebo" type="gen_dae.py"
-		args="5 8 2 2 $(find cvg_sim_gazebo)/meshes/grid.dae"
+		name="gen_dae" pkg="thinc_sim_gazebo" type="gen_dae.py"
+		args="5 8 2 2 $(find thinc_sim_gazebo)/meshes/grid.dae"
 	/>
 
 	<node
-                name="gen_" pkg="cvg_sim_gazebo" type="gen_dae.py"
-                args="5 8 2 2 $(find cvg_sim_gazebo)/meshes/grid.dae"
+                name="gen_" pkg="thinc_sim_gazebo" type="gen_dae.py"
+                args="5 8 2 2 $(find thinc_sim_gazebo)/meshes/grid.dae"
         />
 
 	<!-- Start Gazebo with wg world running in (max) realtime -->
-	<!-- <include file="$(find cvg_sim_gazebo)/launch/grid.launch"> -->
+	<!-- <include file="$(find thinc_sim_gazebo)/launch/grid.launch"> -->
 
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
-		<arg name="world_name" value="$(find cvg_sim_gazebo)/worlds/houses.world"/>
+		<arg name="world_name" value="$(find thinc_sim_gazebo)/worlds/houses.world"/>
 	</include>
 
-	<!-- Spawn a drone that its namespace matches what tum_ardrone package looks for -->
+	<!-- Spawn a drone that its namespace matches what thinc_ardrone package looks for -->
 	<group>
 		<param name="tf_prefix" value="ardrone"/>
-		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+		<include file="$(find thinc_sim_gazebo)/launch/spawn_quadrotor.launch" >
 			<arg name="x" value="-7.00"/>
 			<arg name="y" value="0.00"/>
 			<arg name="z" value="0.70"/>
@@ -35,7 +35,7 @@
 	<!--
 	<group ns="drone1">
 		<param name="tf_prefix" value="drone1"/>
-		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+		<include file="$(find thinc_sim_gazebo)/launch/spawn_quadrotor.launch" >
 			<arg name="robot_namespace" value="drone1"/>
 			<arg name="x" value="-1.00"/>
 			<arg name="y" value="2.00"/>
@@ -45,7 +45,7 @@
 
 	<group ns="drone2">
 		<param name="tf_prefix" value="drone2"/>
-		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+		<include file="$(find thinc_sim_gazebo)/launch/spawn_quadrotor.launch" >
 			<arg name="robot_namespace" value="drone2"/>
 			<arg name="x" value="-1.00"/>
 			<arg name="y" value="-2.00"/>
@@ -56,7 +56,7 @@
 	
 	<group ns="drone3">
 		<param name="tf_prefix" value="drone3"/>
-		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+		<include file="$(find thinc_sim_gazebo)/launch/spawn_quadrotor.launch" >
 			<arg name="robot_namespace" value="drone3"/>
 			<arg name="x" value="-1.00"/>
 			<arg name="y" value="0.00"/>
@@ -66,7 +66,7 @@
 
 	<group ns="drone4">
 		<param name="tf_prefix" value="drone4"/>
-		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+		<include file="$(find thinc_sim_gazebo)/launch/spawn_quadrotor.launch" >
 			<arg name="robot_namespace" value="drone4"/>
 			<arg name="x" value="-3.00"/>
 			<arg name="y" value="2.00"/>
@@ -76,7 +76,7 @@
 
     <group ns="drone5">
 		<param name="tf_prefix" value="drone5"/>
-		<include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
+		<include file="$(find thinc_sim_gazebo)/launch/spawn_quadrotor.launch" >
 			<arg name="robot_namespace" value="drone5"/>
 			<arg name="x" value="-3.00"/>
 			<arg name="y" value="-2.00"/>

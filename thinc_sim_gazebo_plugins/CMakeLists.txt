@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(cvg_sim_gazebo_plugins)
+project(thinc_sim_gazebo_plugins)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -113,7 +113,7 @@ target_link_libraries(diffdrive_plugin_6w ${Boost_LIBRARIES})
 add_library(reset_plugin src/reset_plugin.cpp)
 
 add_library(hector_gazebo_ros_imu src/gazebo_ros_imu.cpp)
-add_dependencies(hector_gazebo_ros_imu cvg_sim_gazebo_plugins_gencpp)
+add_dependencies(hector_gazebo_ros_imu thinc_sim_gazebo_plugins_gencpp)
 target_link_libraries(hector_gazebo_ros_imu ${Boost_LIBRARIES})
 
 add_library(hector_gazebo_ros_magnetic src/gazebo_ros_magnetic.cpp)
@@ -121,7 +121,7 @@ add_library(hector_gazebo_ros_gps src/gazebo_ros_gps.cpp)
 add_library(hector_gazebo_ros_sonar src/gazebo_ros_sonar.cpp)
 
 add_library(hector_gazebo_ros_baro src/gazebo_ros_baro.cpp)
-add_dependencies(hector_gazebo_ros_baro cvg_sim_msgs_gencpp)
+add_dependencies(hector_gazebo_ros_baro thinc_sim_msgs_gencpp)
 
 add_library(hector_gazebo_quadrotor_simple_controller src/quadrotor_simple_controller.cpp)
 add_dependencies(hector_gazebo_quadrotor_simple_controller ardrone_autonomy_gencpp)
@@ -137,10 +137,10 @@ target_link_libraries(test_trajectory ${catkin_LIBRARIES})
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(cvg_sim_gazebo_plugins_node cvg_sim_gazebo_plugins_generate_messages_cpp)
+# add_dependencies(thinc_sim_gazebo_plugins_node thinc_sim_gazebo_plugins_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(cvg_sim_gazebo_plugins_node
+# target_link_libraries(thinc_sim_gazebo_plugins_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -159,7 +159,7 @@ target_link_libraries(test_trajectory ${catkin_LIBRARIES})
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS cvg_sim_gazebo_plugins cvg_sim_gazebo_plugins_node
+# install(TARGETS thinc_sim_gazebo_plugins thinc_sim_gazebo_plugins_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -184,7 +184,7 @@ target_link_libraries(test_trajectory ${catkin_LIBRARIES})
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_cvg_sim_gazebo_plugins.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_thinc_sim_gazebo_plugins.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

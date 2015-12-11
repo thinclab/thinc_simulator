@@ -1,6 +1,6 @@
 #!/usr/bin/env python 
 
-import roslib; roslib.load_manifest('cvg_sim_gazebo')
+import roslib; roslib.load_manifest('thinc_sim_gazebo')
 import rospy
 rospy.init_node('gen_dae')
 

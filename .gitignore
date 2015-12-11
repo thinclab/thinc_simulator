@@ -16,7 +16,7 @@
 *~
 
 
-cvg_sim_gazebo/meshes/grid.dae
-cvg_sim_gazebo/meshes/grid.png
-cvg_sim_gazebo/worlds/grid.world
+thinc_sim_gazebo/meshes/grid.dae
+thinc_sim_gazebo/meshes/grid.png
+thinc_sim_gazebo/worlds/grid.world
 

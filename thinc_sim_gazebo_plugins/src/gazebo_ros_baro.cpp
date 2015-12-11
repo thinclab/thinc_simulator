@@ -127,7 +127,7 @@ void GazeboRosBaro::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
   }
 
   if (!altimeter_topic_.empty()) {
-    altimeter_publisher_ = node_handle_->advertise<cvg_sim_msgs::Altimeter>(altimeter_topic_, 10);
+    altimeter_publisher_ = node_handle_->advertise<thinc_sim_msgs::Altimeter>(altimeter_topic_, 10);
   }
 
   Reset();

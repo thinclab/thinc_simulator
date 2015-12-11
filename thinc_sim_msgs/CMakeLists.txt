@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(cvg_sim_msgs)
+project(thinc_sim_msgs)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -99,7 +99,7 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES cvg_sim_msgs
+#  LIBRARIES thinc_sim_msgs
 #  CATKIN_DEPENDS geometry_msgs
 #  DEPENDS system_lib
 CATKIN_DEPENDS message_runtime
@@ -117,19 +117,19 @@ include_directories(
 )
 
 ## Declare a cpp library
-# add_library(cvg_sim_msgs
-#   src/${PROJECT_NAME}/cvg_sim_msgs.cpp
+# add_library(thinc_sim_msgs
+#   src/${PROJECT_NAME}/thinc_sim_msgs.cpp
 # )
 
 ## Declare a cpp executable
-# add_executable(cvg_sim_msgs_node src/cvg_sim_msgs_node.cpp)
+# add_executable(thinc_sim_msgs_node src/thinc_sim_msgs_node.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(cvg_sim_msgs_node cvg_sim_msgs_generate_messages_cpp)
+# add_dependencies(thinc_sim_msgs_node thinc_sim_msgs_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(cvg_sim_msgs_node
+# target_link_libraries(thinc_sim_msgs_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -148,7 +148,7 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS cvg_sim_msgs cvg_sim_msgs_node
+# install(TARGETS thinc_sim_msgs thinc_sim_msgs_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -173,7 +173,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_cvg_sim_msgs.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_thinc_sim_msgs.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

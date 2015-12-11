@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package>
-  <name>cvg_sim_msgs</name>
+  <name>thinc_sim_msgs</name>
   <version>0.0.0</version>
   <description>
-	cvg_sim_msgs contains message form for cvg_sim_gazebo_plugins.
+	thinc_sim_msgs contains message form for thinc_sim_gazebo_plugins.
      	This package is based on hector_uav_msgs by Stefan Kohlbrecher, TU Darmstadt.
   </description>
   <maintainer email="elliot@todo.todo">elliot</maintainer>
